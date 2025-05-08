@@ -6,7 +6,7 @@ export default function Home() {
       <section className="text-center py-12">
         <div className="mb-6 flex justify-center">
           <Image
-            src="/UtahGrownLogo-Green.png"
+            src="/UtahGrownLogoWhiteBorder@2x.png"
             alt="Utah Grown Logo"
             width={300}
             height={80}
