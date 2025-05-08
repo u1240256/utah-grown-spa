@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Montserrat', 'sans-serif'], // fallback for Proxima Nova
+        interstate: ['"Interstate Condensed"', 'sans-serif'],
+        proxima: ['"Proxima Nova"', 'sans-serif'],
       },
     },
   },  
