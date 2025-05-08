@@ -7,7 +7,7 @@ export default function Home() {
       <header className="relative bg-[#103c00] text-white">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/top-header.png"
+            src="/topheaderimage.png"
             alt="Top Header Background"
             fill
             className="object-cover object-center opacity-90"
