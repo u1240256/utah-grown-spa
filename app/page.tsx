@@ -92,7 +92,7 @@ export default function Home() {
             </h2>
           </section>
 
-          <section className="text-center py-10 px-4">
+          <section className="text-center py-2 px-4">
             <h1 className="text-5xl font-bold font-Proxima Nova pl-11" style={{ color: "#103c00" }}>
               Upcoming Utah Medical Card Events
             </h1>
@@ -155,15 +155,13 @@ export default function Home() {
           {/* THINGS TO KNOW */}
           <section className="bg-white py-0 px-6 text-[#103c00] flex flex-col items-end">
             <div className="w-[1100px] max-w-full mx-auto bg-white rounded-xl py-2 px-8 shadow-none">
-              <h2 className="text-4xl font-bold text-center mb-20 mt-10" style={{ color: "#103c00" }}>
+              <h2 className="text-4xl font-bold text-center mb-6 mt-10" style={{ color: "#103c00" }}>
                 Things to know before your appointment
               </h2>
-
               {/* STEP 1 */}
-              <div className="flex items-start mb-12 w-full">
-                <div className="flex flex-col items-center mr-8 mt-[-10px]">
-                  <Image src="/Number1@2x.png" alt="Step 1" width={60} height={60} />
-                </div>
+              <div className="flex items-start mb-6 w-full">                <div className="flex flex-col items-center mr-8 mt-[-10px]">
+                <Image src="/Number1@2x.png" alt="Step 1" width={60} height={60} />
+              </div>
                 <div className="flex-1">
                   <p className="font-['Interstate Condensed'] text-[#103c00] font-bold text-2xl mb-4 text-left -ml-2 tracking-tight">
                     You’re going to register with the state of Utah. You can start this before you arrive.
@@ -200,10 +198,9 @@ export default function Home() {
               </div>
 
               {/* STEP 2 */}
-              <div className="flex items-start mb-12 w-full">
-                <div className="flex flex-col items-center mr-8 mt-[-10px]">
-                  <Image src="/Number2@2x.png" alt="Step 2" width={60} height={60} />
-                </div>
+              <div className="flex items-start mb-6 w-full">                <div className="flex flex-col items-center mr-8 mt-[-10px]">
+                <Image src="/Number2@2x.png" alt="Step 2" width={60} height={60} />
+              </div>
                 <div className="flex-1 flex items-center">
                   <span className="font-['Interstate Condensed'] text-[#103c00] font-bold text-2xl text-left -ml-3 tracking-tight mr-9 mb-12">
                     Check in with your QMP
@@ -217,30 +214,29 @@ export default function Home() {
               </div>
 
               {/* STEP 3 */}
-              <div className="flex items-start w-full mb-12">
-                <div className="flex flex-col items-center mr-4 mt-[-10px]">
-                  <Image src="/Number3@2x.png" alt="Step 3" width={60} height={60} />
-                </div>
+              <div className="flex items-start w-full mb-0">                <div className="flex flex-col items-center -mr-3 mt-[-10px]">
+                <Image src="/Number3@2x.png" alt="Step 3" width={70} height={70} />
+              </div>
                 <div className="flex-1">
                   <div className="flex items-baseline">
-                    <span className="font-['Interstate Condensed'] text-[#103c00] font-bold text-2xl text-left ml-3 tracking-tight mr-8">
+                    <span className="font-['Interstate Condensed'] text-[#103c00] font-bold text-2xl text-left ml-9 tracking-tight mr-7">
                       Renewal or New Patient?
                     </span>
-                    <span className="text-xl font-['Interstate Condensed'] font-bold text-[#103c00] -ml-0">
+                    <span className="text-xl font-['Interstate Condensed'] font-bold text-[#103c00] ml-1">
                       If this is a renewal, congratulations you are ready to shop…
                     </span>
                   </div>
-                  <div className="flex items-baseline mt-2">
-                    <span className="ml-[321px] text-xl font-['Interstate Condensed'] font-bold text-[#103c00]">
+                  <div className="flex items-baseline mt-0">
+                    <span className="ml-[345px] text-xl font-['Interstate Condensed'] font-bold text-[#103c00]">
                       If you are a new patient, here are some helps to get you started…
                     </span>
                   </div>
-                  <ol className="list-decimal text-xl font-['Interstate Condensed'] font-bold ml-[450px] mt-5 space-y-2">
+                  <ol className="list-decimal text-xl font-['Interstate Condensed'] font-bold ml-[465px] mt-2 space-y-2">
                     <li>Meet with Pharmacist</li>
                     <li>Set up your Portal Account</li>
                     <li>Start Shopping</li>
                   </ol>
-                  <div className="ml-[427px] mt-3">
+                  <div className="ml-[442px] mt-0 mb-0">
                     <span className="text-xl font-['Interstate Condensed'] font-bold text-[#103c00] whitespace-nowrap">
                       **Don’t forget to take advantage of new patient deals**
                     </span>
@@ -249,17 +245,42 @@ export default function Home() {
               </div>
             </div>
           </section>
-
-          {/* BANNER */}
-          <div className="mt-6 flex justify-center">
-            <Image
-              src="/MockBannerAd@2x.png"
-              alt="Mock Banner Ad"
-              width={600}
-              height={200}
-            />
+          <div
+            className="relative flex justify-center items-center w-[1280px] h-[320px] mx-auto -mt-40 mb-10"
+            style={{ maxWidth: "100%" }}
+          >
+            <div className="w-full h-full rounded-2xl overflow-hidden relative bg-white">
+              <Image
+                src="/MockBannerAd.png"
+                alt="Mock Banner Ad"
+                width={1280}
+                height={320}
+                style={{ objectFit: "contain", width: "100%", height: "100%" }}
+                priority
+              />
+              <span
+                className="absolute"
+                style={{
+                  right: 0,
+                  bottom: 0,
+                  marginRight: "18px",
+                  marginBottom: "10px",
+                  color: "#808080",
+                  fontSize: "2rem",
+                  fontWeight: "bold",
+                  fontFamily: "sans-serif",
+                  letterSpacing: "0.05em",
+                  zIndex: 10,
+                  background: "rgba(255,255,255,0.85)",
+                  borderRadius: "8px",
+                  padding: "2px 16px 2px 16px",
+                  lineHeight: 1.2,
+                }}
+              >
+                Ad
+              </span>
+            </div>
           </div>
-
           {/* HOW TO GET CARD */}
           <section className="bg-white text-gray-800 py-12 px-6">
             <h2 className="text-3xl font-extrabold font-proxima text-center mb-6" style={{ color: "#103c00" }}>
