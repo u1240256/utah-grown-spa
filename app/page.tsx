@@ -155,7 +155,7 @@ export default function Home() {
           {/* THINGS TO KNOW */}
           <section className="bg-white py-0 px-6 text-[#103c00] flex flex-col items-end">
             <div className="w-[1100px] max-w-full mx-auto bg-white rounded-xl py-2 px-8 shadow-none">
-              <h2 className="text-4xl font-bold text-center mb-8" style={{ color: "#103c00" }}>
+              <h2 className="text-4xl font-bold text-center mb-20 mt-10" style={{ color: "#103c00" }}>
                 Things to know before your appointment
               </h2>
 
@@ -170,29 +170,29 @@ export default function Home() {
                   </p>
                   <div className="flex flex-col gap-6 mt-9">
                     <div className="flex items-center gap-x-6">
-                      <button className="w-[240px] h-[55px] bg-[#e7cbaf] text-[#103c00] text-xl font-['Interstate Condensed'] font-normal rounded-full ml-3">
+                      <button className="w-[240px] h-[55px] bg-[#e7cbaf] text-[#103c00] text-xl font-['Interstate Condensed'] font-normal rounded-full ml-4">
                         UtahID.org
                       </button>
-                      <span className="text-[#103c00] font-bold text-xl">
+                      <span className="text-[#103c00] font-bold text-xl ml-1">
                         Obtain access to your Utah Digital ID
                       </span>
                     </div>
                     <div className="flex items-center gap-x-6">
-                      <button className="w-[240px] h-[55px] bg-[#e7cbaf] text-[#103c00] text-xl font-['Interstate Condensed'] font-normal rounded-full ml-3">
+                      <button className="w-[240px] h-[55px] bg-[#e7cbaf] text-[#103c00] text-xl font-['Interstate Condensed'] font-normal rounded-full ml-4">
                         EVS.Utah.gov
                       </button>
-                      <span className="text-[#103c00] font-bold text-xl">
+                      <span className="text-[#103c00] font-bold text-xl ml-1">
                         Fill out all the fields until you get to “Awaiting Certification” status
                       </span>
                     </div>
                   </div>
 
                   <div className="flex items-center mt-4">
-                    <div style={{ width: 250 }} />
+                    <div style={{ width: 254 }} />
                     <Image
                       src="/AwaitingCert-Image@2x.png"
                       alt="Awaiting Certification"
-                      width={255}
+                      width={260}
                       height={120}
                     />
                   </div>
@@ -218,29 +218,29 @@ export default function Home() {
 
               {/* STEP 3 */}
               <div className="flex items-start w-full mb-12">
-                <div className="flex flex-col items-center mr-8 mt-[-10px]">
+                <div className="flex flex-col items-center mr-4 mt-[-10px]">
                   <Image src="/Number3@2x.png" alt="Step 3" width={60} height={60} />
                 </div>
                 <div className="flex-1">
                   <div className="flex items-baseline">
-                    <span className="font-['Interstate Condensed'] text-[#103c00] font-bold text-2xl text-left -ml-3 tracking-tight mr-8">
+                    <span className="font-['Interstate Condensed'] text-[#103c00] font-bold text-2xl text-left ml-3 tracking-tight mr-8">
                       Renewal or New Patient?
                     </span>
-                    <span className="text-xl font-['Interstate Condensed'] font-bold text-[#103c00] ml-1">
+                    <span className="text-xl font-['Interstate Condensed'] font-bold text-[#103c00] -ml-0">
                       If this is a renewal, congratulations you are ready to shop…
                     </span>
                   </div>
                   <div className="flex items-baseline mt-2">
-                    <span className="ml-[300px] text-xl font-['Interstate Condensed'] font-bold text-[#103c00]">
+                    <span className="ml-[321px] text-xl font-['Interstate Condensed'] font-bold text-[#103c00]">
                       If you are a new patient, here are some helps to get you started…
                     </span>
                   </div>
-                  <ol className="list-decimal text-xl font-['Interstate Condensed'] font-bold ml-[428px] mt-5 space-y-2">
+                  <ol className="list-decimal text-xl font-['Interstate Condensed'] font-bold ml-[450px] mt-5 space-y-2">
                     <li>Meet with Pharmacist</li>
                     <li>Set up your Portal Account</li>
                     <li>Start Shopping</li>
                   </ol>
-                  <div className="ml-[405px] mt-3">
+                  <div className="ml-[427px] mt-3">
                     <span className="text-xl font-['Interstate Condensed'] font-bold text-[#103c00] whitespace-nowrap">
                       **Don’t forget to take advantage of new patient deals**
                     </span>
