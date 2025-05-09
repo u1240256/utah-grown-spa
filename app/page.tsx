@@ -2,12 +2,19 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
+const MAX_WIDTH = 1280;
+const MIN_WIDTH = 375;
+
 export default function Home() {
   const [scale, setScale] = useState(1);
+  const [leftOffset, setLeftOffset] = useState(0);
+
   useEffect(() => {
     const handleResize = () => {
-      const scaleFactor = Math.min(window.innerWidth / 1280, 1);
+      const width = Math.max(window.innerWidth, MIN_WIDTH);
+      const scaleFactor = Math.min(width / MAX_WIDTH, 1);
       setScale(Number(scaleFactor.toFixed(3)));
+      setLeftOffset(scaleFactor === 1 ? (window.innerWidth - MAX_WIDTH) / 2 : 0);
     };
 
     handleResize();
@@ -16,214 +23,256 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="bg-white text-[#103c00] font-interstate">
-  <div
-    className="relative w-full min-h-screen overflow-x-hidden overflow-y-auto"
-    style={{ height: `${1280 * (1 / scale)}px` }}
-  >
     <div
       style={{
-        width: 1280,
-        transform: `scale(${scale})`,
-        transformOrigin: "top left",
+        width: "100vw",
+        minHeight: "100vh",
+        overflowX: "hidden",
+        overflowY: "scroll",
+        background: "white",
       }}
     >
-      <header className="relative text-white">
-        <div className="relative h-[540px]">
+      <div
+        style={{
+          width: MAX_WIDTH,
+          minHeight: "100vh",
+          transform: `scale(${scale})`,
+          transformOrigin: "top left",
+          position: "relative",
+          left: leftOffset > 0 ? leftOffset : 0,
+        }}
+      >
+        {/* HEADER SECTION */}
+        <div className="relative w-full h-[540px] overflow-hidden">
           <img
             src="/topheaderimage.png"
             alt="Top Header Background"
             className="absolute inset-0 w-full h-full object-cover"
           />
-
-          <div className="relative z-10 max-w-7xl mx-auto px-10 pt-10 flex justify-center">
-            <nav className="pl-18 flex justify-center text-sm text-[#103c00] font-Proxima Nova font-Semibold uppercase tracking-wider mt-4">
-              <a href="#" className="ml-20 mr-10">Appointments</a>
-              <a href="#" className="mx-10">Medical Card Info</a>
-              <a href="#" className="mx-10">FAQs</a>
-              <a href="#" className="mx-10">Pharmacies</a>
-              <a href="#" className="ml-10 mr-20">About</a>
+          <div className="relative z-10 max-w-[1280px] mx-auto px-10 pt-10">
+            <nav className="flex justify-center text-sm text-[#103c00] font-semibold uppercase tracking-wider mt-4 space-x-20">
+              <a href="#">Appointments</a>
+              <a href="#">Medical Card Info</a>
+              <a href="#">FAQs</a>
+              <a href="#">Pharmacies</a>
+              <a href="#">About</a>
             </nav>
           </div>
-
-          <div className="absolute bottom-[-38px] left-1/2 transform -translate-x-[40%] z-20 w-[871px] h-[300px]">
-            <Image
-              src="/UtahGrownLogoWhiteBorder@2x.png"
-              alt="Utah Grown Logo"
-              fill
-              className="object-contain"
-            />
-          </div>
         </div>
-        <div className="bg-[#103c00] h-[50px] w-full" />
-      </header>
 
-      {/* TITLE + EVENTS */}
-      <section className="text-center py-2 px-4">
-        <h2 className="text-3xl font-['Interstate Condensed'] font-light tracking-tight">
-          Utah’s Cannabis Community
-        </h2>
-      </section>
+        {/* Green bar */}
+        <div className="relative w-full h-[50px] bg-[#103c00] z-20" />
 
-      <section className="text-center py-10 px-4">
-        <h1 className="text-5xl font-Semibold font-Proxima Nova pl-11">
-          Upcoming Utah Medical Card Events
-        </h1>
-        <div className="mt-10 space-y-6">
-          {[
-            {
-              location: "Downtown\nSLC",
-              date: "Tuesday, October 3rd 2023",
-              time: "9:00 am - 2:00pm",
-              note: "New Patients and Renewals",
-            },
-            {
-              location: "Price UT",
-              date: "Thursday, October 19th 2023",
-              time: "9:00 am - 4:00pm",
-              note: "Renewals Only",
-            },
-            {
-              location: "<Other Location>",
-              date: "Friday, November 10th 2023",
-              time: "10:00 am - 2:00pm",
-              note: "Special Event for Veterans",
-            },
-          ].map(({ location, date, time, note }, i) => (
-            <div className="max-w-[1024px] mx-auto w-full px-4">
-              <div className="flex items-center bg-[#f2f2f2] border border-[#103c00] rounded-xl h-[150px] px-6">
-                <div className="w-[25%] flex justify-start items-center pl-4">
-                  <p className="text-2xl text-[#35711f] font-proxima leading-tight whitespace-pre-line text-center">
-                    {location}
-                  </p>
+        {/* Logo */}
+        <div
+          className="absolute z-20"
+          style={{
+            top: 280,
+            left: "50%",
+            transform: "translateX(-40%)",
+            width: 890,
+            height: 300,
+            pointerEvents: "none",
+          }}
+        >
+          <Image
+            src="/UtahGrownLogoWhiteBorder@2x.png"
+            alt="Utah Grown Logo"
+            fill
+            className="object-contain"
+            priority
+          />
+        </div>
+
+        {/* CONTENT */}
+        <div className="max-w-[1280px] mx-auto px-4">
+          <section className="text-center py-2 px-4">
+            <h2 className="text-3xl font-['Interstate Condensed'] font-regular tracking-tight ml-2" style={{ color: "#103c00" }}>
+              Utah’s Cannabis Community
+            </h2>
+          </section>
+
+          <section className="text-center py-10 px-4">
+            <h1 className="text-5xl font-bold font-Proxima Nova pl-11" style={{ color: "#103c00" }}>
+              Upcoming Utah Medical Card Events
+            </h1>
+            <div className="mt-10 flex flex-col gap-10 items-end">
+              {[
+                {
+                  location: "Downtown\nSLC",
+                  date: "Tuesday, October 3rd 2023",
+                  time: "9:00 am - 2:00pm",
+                  note: "New Patients and Renewals",
+                },
+                {
+                  location: "Price UT",
+                  date: "Thursday, October 19th 2023",
+                  time: "9:00 am - 4:00pm",
+                  note: "Renewals Only",
+                },
+                {
+                  location: "<Other Location>",
+                  date: "Friday, November 10th 2023",
+                  time: "10:00 am - 2:00pm",
+                  note: "Special Event for Veterans",
+                },
+              ].map(({ location, date, time, note }, i) => (
+                <div
+                  key={i}
+                  className="w-[1100px] mr-8"
+                  style={{
+                    maxWidth: "95%",
+                  }}
+                >
+                  <div className="flex items-center bg-[#f2f2f2] border border-[#103c00] rounded-xl h-[150px] px-8">
+                    <div className="w-[25%] flex justify-start items-center pl-4">
+                      <p className="text-2xl text-[#35711f] font-proxima leading-tight whitespace-pre-line text-center">
+                        {location}
+                      </p>
+                    </div>
+                    <div className="w-[55%] flex flex-col justify-center items-start text-left pl-2 pr-1">
+                      <p className="text-3xl font-extrabold" style={{ color: "#103c00" }}>
+                        {date}
+                      </p>
+                      <p className="text-xl text-[#35711f] font-proxima mt-1">
+                        {time}
+                      </p>
+                      <p className="text-xl text-[#35711f] font-proxima mt-1">
+                        {note}
+                      </p>
+                    </div>
+                    <div className="w-[20%] flex justify-end pr-2">
+                      <button className="w-[180px] h-[65px] bg-[#e7cbaf] text-[#35711f] text-xl font-['Interstate Condensed'] font-normal rounded-full whitespace-nowrap">
+                        Book Time
+                      </button>
+                    </div>
+                  </div>
                 </div>
-                <div className="w-[55%] flex flex-col justify-center items-start text-left pl-2 pr-1">
-                  <p className="text-3xl font-extrabold text-[#103c00] font-proxima whitespace-nowrap">
-                    {date}
-                  </p>
-                  <p className="text-xl text-[#35711f] font-proxima mt-1">
-                    {time}
-                  </p>
-                  <p className="text-xl text-[#35711f] font-proxima mt-1">
-                    {note}
-                  </p>
+              ))}
+            </div>
+          </section>
+
+          {/* THINGS TO KNOW */}
+          <section className="bg-white py-0 px-6 text-[#103c00] flex flex-col items-end">
+            <div className="w-[1100px] max-w-full mx-auto bg-white rounded-xl py-2 px-8 shadow-none">
+              <h2 className="text-4xl font-bold text-center mb-8" style={{ color: "#103c00" }}>
+                Things to know before your appointment
+              </h2>
+
+              {/* STEP 1 */}
+              <div className="flex items-start mb-12 w-full">
+                <div className="flex flex-col items-center mr-8 mt-[-10px]">
+                  <Image src="/Number1@2x.png" alt="Step 1" width={60} height={60} />
                 </div>
-                <div className="w-[20%] flex justify-end pr-2">
-                  <button className="w-[180px] h-[55px] bg-[#e7cbaf] text-[#35711f] text-xl font-['Interstate Condensed'] font-normal rounded-full whitespace-nowrap">
-                    Book Time
-                  </button>
+                <div className="flex-1">
+                  <p className="font-['Interstate Condensed'] text-[#103c00] font-bold text-2xl mb-4 text-left -ml-2 tracking-tight">
+                    You’re going to register with the state of Utah. You can start this before you arrive.
+                  </p>
+                  <div className="flex flex-col gap-6 mt-9">
+                    <div className="flex items-center gap-x-6">
+                      <button className="w-[240px] h-[55px] bg-[#e7cbaf] text-[#103c00] text-xl font-['Interstate Condensed'] font-normal rounded-full ml-3">
+                        UtahID.org
+                      </button>
+                      <span className="text-[#103c00] font-bold text-xl">
+                        Obtain access to your Utah Digital ID
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-x-6">
+                      <button className="w-[240px] h-[55px] bg-[#e7cbaf] text-[#103c00] text-xl font-['Interstate Condensed'] font-normal rounded-full ml-3">
+                        EVS.Utah.gov
+                      </button>
+                      <span className="text-[#103c00] font-bold text-xl">
+                        Fill out all the fields until you get to “Awaiting Certification” status
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center mt-4">
+                    <div style={{ width: 250 }} />
+                    <Image
+                      src="/AwaitingCert-Image@2x.png"
+                      alt="Awaiting Certification"
+                      width={255}
+                      height={120}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* STEP 2 */}
+              <div className="flex items-start mb-12 w-full">
+                <div className="flex flex-col items-center mr-8 mt-[-10px]">
+                  <Image src="/Number2@2x.png" alt="Step 2" width={60} height={60} />
+                </div>
+                <div className="flex-1 flex items-center">
+                  <span className="font-['Interstate Condensed'] text-[#103c00] font-bold text-2xl text-left -ml-3 tracking-tight mr-9 mb-12">
+                    Check in with your QMP
+                  </span>
+                  <ol className="list-decimal text-xl font-['Interstate Condensed'] font-bold ml-8">
+                    <li>QMP Registration</li>
+                    <li>Medical Evaluation/Consultation</li>
+                    <li>Payment</li>
+                  </ol>
+                </div>
+              </div>
+
+              {/* STEP 3 */}
+              <div className="flex items-start w-full mb-12">
+                <div className="flex flex-col items-center mr-8 mt-[-10px]">
+                  <Image src="/Number3@2x.png" alt="Step 3" width={60} height={60} />
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-baseline">
+                    <span className="font-['Interstate Condensed'] text-[#103c00] font-bold text-2xl text-left -ml-3 tracking-tight mr-8">
+                      Renewal or New Patient?
+                    </span>
+                    <span className="text-xl font-['Interstate Condensed'] font-bold text-[#103c00] ml-1">
+                      If this is a renewal, congratulations you are ready to shop…
+                    </span>
+                  </div>
+                  <div className="flex items-baseline mt-2">
+                    <span className="ml-[300px] text-xl font-['Interstate Condensed'] font-bold text-[#103c00]">
+                      If you are a new patient, here are some helps to get you started…
+                    </span>
+                  </div>
+                  <ol className="list-decimal text-xl font-['Interstate Condensed'] font-bold ml-[428px] mt-5 space-y-2">
+                    <li>Meet with Pharmacist</li>
+                    <li>Set up your Portal Account</li>
+                    <li>Start Shopping</li>
+                  </ol>
+                  <div className="ml-[405px] mt-3">
+                    <span className="text-xl font-['Interstate Condensed'] font-bold text-[#103c00] whitespace-nowrap">
+                      **Don’t forget to take advantage of new patient deals**
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
-          ))}
+          </section>
+
+          {/* BANNER */}
+          <div className="mt-6 flex justify-center">
+            <Image
+              src="/MockBannerAd@2x.png"
+              alt="Mock Banner Ad"
+              width={600}
+              height={200}
+            />
+          </div>
+
+          {/* HOW TO GET CARD */}
+          <section className="bg-white text-gray-800 py-12 px-6">
+            <h2 className="text-3xl font-extrabold font-proxima text-center mb-6" style={{ color: "#103c00" }}>
+              How to Get Your Utah Medical Card
+            </h2>
+            <ol className="list-decimal list-inside max-w-2xl mx-auto space-y-4 text-left">
+              <li>Book an appointment with a QMP</li>
+              <li>Complete a medical evaluation</li>
+              <li>Pay & register with the Utah Department of Health</li>
+            </ol>
+          </section>
         </div>
-      </section>
-
-
-      <section className="bg-white py-16 px-6 text-[#103c00]">
-        <h2 className="text-4xl font-extrabold text-center mb-12 text-[#103c00]">
-          Things to know before your appointment
-        </h2>
-
-        {/* STEP 1 */}
-        <div className="w-[82%] ml-auto mr-[5%] mb-16">
-          <div className="flex items-center space-x-4 mb-6">
-            <Image src="/Number1@2x.png" alt="Step 1" width={50} height={50} />
-            <p className="text-lg font-semibold">
-              You’re going to register with the state of Utah. You can start this before you arrive.
-            </p>
-          </div>
-
-          <div className="ml-[80px] space-y-6">
-            {/* UtahID.org row */}
-            <div className="flex items-center">
-              <button className="w-[200px] h-[45px] bg-[#e7cbaf] text-[#103c00] text-sm font-semibold rounded-full">
-                UtahID.org
-              </button>
-              <span className="ml-6 text-sm font-medium">
-                Obtain access to your Utah Digital ID
-              </span>
-            </div>
-
-            {/* EVS.Utah.gov row */}
-            <div className="flex items-center">
-              <button className="w-[200px] h-[45px] bg-[#e7cbaf] text-[#103c00] text-sm font-semibold rounded-full">
-                EVS.Utah.gov
-              </button>
-              <span className="ml-6 text-sm font-medium">
-                Fill out all the fields until you get to “Awaiting Certification” status
-              </span>
-            </div>
-
-            {/* Awaiting image row */}
-            <div className="pt-4 pl-[200px]">
-              <Image
-                src="/AwaitingCert-Image@2x.png"
-                alt="Awaiting Certification"
-                width={160}
-                height={64}
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* STEP 2 */}
-        <div className="w-[82%] ml-auto mr-[5%] mb-16">
-          <div className="flex items-center space-x-4 mb-4">
-            <Image src="/Number2@2x.png" alt="Step 2" width={50} height={50} />
-            <p className="text-lg font-semibold">Check in with your QMP</p>
-          </div>
-          <ul className="ml-[80px] list-disc text-sm space-y-1">
-            <li>QMP Registration</li>
-            <li>Medical Evaluation/Consultation</li>
-            <li>Payment</li>
-          </ul>
-        </div>
-
-        {/* STEP 3 */}
-        <div className="w-[82%] ml-auto mr-[5%]">
-          <div className="flex items-center space-x-4 mb-4">
-            <Image src="/Number3@2x.png" alt="Step 3" width={50} height={50} />
-            <p className="text-lg font-semibold">Renewal or New Patient?</p>
-          </div>
-          <div className="ml-[80px] text-sm space-y-4">
-            <p>If this is a renewal, congratulations you are ready to shop…</p>
-            <p>If you are a new patient, here are some helps to get you started…</p>
-            <ul className="list-decimal list-inside space-y-1">
-              <li>Meet with Pharmacist</li>
-              <li>Set up your Portal Account</li>
-              <li>Start Shopping</li>
-            </ul>
-            <p className="font-semibold text-[#103c00]">
-              **Don’t forget to take advantage of new patient deals**
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* BANNER */}
-      <div className="mt-6 flex justify-center">
-        <Image
-          src="/MockBannerAd@2x.png"
-          alt="Mock Banner Ad"
-          width={600}
-          height={200}
-        />
       </div>
-
-      {/* HOW TO GET CARD */}
-      <section className="bg-white text-gray-800 py-12 px-6">
-        <h2 className="text-3xl font-extrabold font-proxima text-center mb-6">
-          How to Get Your Utah Medical Card
-        </h2>
-        <ol className="list-decimal list-inside max-w-2xl mx-auto space-y-4 text-left">
-          <li>Book an appointment with a QMP</li>
-          <li>Complete a medical evaluation</li>
-          <li>Pay & register with the Utah Department of Health</li>
-        </ol>
-      </section>
     </div>
-      </div >
-    </main >
   );
 }
