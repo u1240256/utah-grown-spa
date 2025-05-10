@@ -1,12 +1,12 @@
-'use client';
+"use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
 const BASE_WIDTH = 1280;
 const MIN_WIDTH = 375;
-const HEADER_BG_WIDTH = 1920;
-const HEADER_HEIGHT = 540;
-const GREEN_BAR_HEIGHT = 50;
+const HEADER_BG_WIDTH = 2210;
+const HEADER_HEIGHT = 790;
+const GREEN_BAR_HEIGHT = 65;
 
 export default function Home() {
   const [scale, setScale] = useState(1);
@@ -76,16 +76,16 @@ export default function Home() {
           style={{
             width: BASE_WIDTH,
             position: "absolute",
-            top: 40,
-            left: 0,
+            top: 55,
+            left: 5,
             right: 0,
             margin: "0 auto",
             zIndex: 10,
             pointerEvents: "auto",
           }}
         >
-          <div className="max-w-[1280px] mx-auto px-10 pt-10">
-            <nav className="flex justify-center text-sm text-[#103c00] font-semibold uppercase tracking-wider mt-4 space-x-20">
+          <div style={{ overflowX: "auto", width: "100%" }}>
+            <nav className="flex justify-start text-xl text-[#103c00] font-Proxima Nova font-semibold uppercase tracking-wider mt-4 gap-x-36 pl-0 min-w-max">
               <a href="#">Appointments</a>
               <a href="#">Medical Card Info</a>
               <a href="#">FAQs</a>
@@ -98,13 +98,13 @@ export default function Home() {
         {/* LOGO */}
         <div
           style={{
-            width: 890,
-            height: 300,
+            width: 1550,
+            height: 420,
             position: "absolute",
-            top: 280,
-            left: "50%",
-            transform: "translateX(-40%)",
-            zIndex: 20,
+            top: 425,
+            left: "19%",
+            transform: "none",
+            zIndex: 40,
             pointerEvents: "none",
           }}
         >
@@ -123,7 +123,9 @@ export default function Home() {
             width: HEADER_BG_WIDTH,
             height: GREEN_BAR_HEIGHT,
             background: "#103c00",
-            position: "relative",
+            position: "absolute",
+            top: HEADER_HEIGHT,
+            left: 0,
             zIndex: 30,
           }}
         />
@@ -136,22 +138,44 @@ export default function Home() {
             margin: "0 auto",
             zIndex: 40,
             position: "relative",
+            paddingTop: 80,
           }}
         >
           {/* CONTENT */}
           <div className="max-w-[1280px] mx-auto px-4">
-            <section className="text-center py-2 px-4">
-              <h2 className="text-3xl font-['Interstate Condensed'] font-regular tracking-tight ml-2" style={{ color: "#103c00" }}>
+            <div
+              style={{
+                width: 1600,
+                marginLeft: "-18%",
+              }}
+            >
+              <h2
+                className="text-4xl font-['Interstate Condensed'] font-regular tracking-tight text-center"
+                style={{ color: "#103c00" }}
+              >
                 Utah’s Cannabis Community
               </h2>
-            </section>
-            <div className="w-full bg-white" style={{ paddingTop: 43, paddingBottom: 0 }}> </div>
+            </div>
+            <div
+              className="w-full bg-white"
+              style={{ paddingTop: 43, paddingBottom: 0 }}
+            >
+              {" "}
+            </div>
             <section className="text-center py-2 px-4">
-              <h1 className="text-5xl font-bold font-Proxima Nova pl-11" style={{ color: "#103c00" }}>
+              <h1
+                className="text-6xl font-bold font-Proxima Nova"
+                style={{ color: "#103c00", marginLeft: "-60px" }}
+              >
                 Upcoming Utah Medical Card Events
               </h1>
-              <div className="w-full bg-white" style={{ paddingTop: 20, paddingBottom: 0 }}> </div>
-              <div className="flex flex-col gap-10 items-center w-full">
+              <div
+                className="w-full bg-white"
+                style={{ paddingTop: 50, paddingBottom: 0 }}
+              >
+                {" "}
+              </div>
+              <div className="flex flex-col gap-12 items-center w-full">
                 {[
                   {
                     location: "Downtown\nSLC",
@@ -174,27 +198,42 @@ export default function Home() {
                 ].map(({ location, date, time, note }, i) => (
                   <div
                     key={i}
-                    className="w-[1250px] max-w-full flex justify-center"
+                    className="w-[1380px] flex justify-center"
+                    style={{ marginLeft: "-50px" }}
                   >
-                    <div className="flex items-center bg-[#f2f2f2] border border-[#103c00] rounded-xl h-[150px] px-8 w-full">
-                      <div className="w-[25%] flex justify-start items-center pl-4">
-                        <p className="text-2xl text-[#35711f] font-proxima leading-tight whitespace-pre-line text-center">
+                    <div className="flex items-center bg-[#f2f2f2] border border-[#103c00] rounded-3xl h-[180px] px-8 w-full">
+                      <div
+                        className="w-[25%] flex justify-start items-center pl-4"
+                        style={
+                          location === "Downtown\nSLC" ||
+                          location === "Price UT"
+                            ? { marginLeft: "39px" }
+                            : {}
+                        }
+                      >
+                        <p className="text-3xl text-[#35711f] font-proxima leading-tight whitespace-pre-line text-center">
                           {location}
                         </p>
                       </div>
                       <div className="w-[55%] flex flex-col justify-center items-start text-left pl-2 pr-1">
-                        <p className="text-3xl font-extrabold" style={{ color: "#103c00" }}>
+                        <p
+                          className="text-4xl font-extrabold"
+                          style={{ color: "#103c00" }}
+                        >
                           {date}
                         </p>
-                        <p className="text-xl text-[#35711f] font-proxima mt-1">
+                        <p className="text-3xl text-[#35711f] font-proxima mt-1">
                           {time}
                         </p>
-                        <p className="text-xl text-[#35711f] font-proxima mt-1">
+                        <p className="text-3xl text-[#35711f] font-proxima mt-1">
                           {note}
                         </p>
                       </div>
-                      <div className="w-[20%] flex justify-end pr-2">
-                        <button className="w-[180px] h-[65px] bg-[#e7cbaf] text-[#35711f] text-xl font-['Interstate Condensed'] font-normal rounded-full whitespace-nowrap">
+                      <div className="w-[20%] flex justify-center pr-2">
+                        <button
+                          className="w-[220px] h-[70px] bg-[#e7cbaf] text-[#35711f] text-3xl font-['Interstate Condensed'] font-normal rounded-full whitespace-nowrap"
+                          style={{ marginLeft: "20px" }}
+                        >
                           Book Time
                         </button>
                       </div>
@@ -205,140 +244,213 @@ export default function Home() {
             </section>
 
             {/* THINGS TO KNOW */}
-            <div className="w-full bg-white" style={{ paddingTop: 50, paddingBottom: 0 }}>
+            <div
+              className="w-full bg-white"
+              style={{ paddingTop: 50, paddingBottom: 0 }}
+            >
               <section className="bg-white py-0 px-6 text-[#103c00] flex flex-col items-end">
                 <div className="w-[1250px] max-w-full mx-auto bg-white rounded-xl py-2 px-8 shadow-none">
-                  <h2 className="text-4xl font-bold text-center mb-6 mt-10" style={{ color: "#103c00" }}>
+                  <h2
+                    className="text-5xl font-bold text-center mb-6 mt-10"
+                    style={{ color: "#103c00" }}
+                  >
                     Things to know before your appointment
                   </h2>
-                  <div className="w-full" style={{ paddingTop: 40, paddingBottom: 0 }}></div>
+                  <div
+                    className="w-full"
+                    style={{ paddingTop: 65, paddingBottom: 0 }}
+                  ></div>
                   {/* STEP 1 */}
-                  <div className="flex items-start mb-6 w-full">
-                    <div className="flex flex-col items-center mr-8 mt-[-10px]">
-                      <Image src="/Number1@2x.png" alt="Step 1" width={60} height={60} />
-                    </div>
-                    <div className="flex-1">
-                      <p className="font-['Interstate Condensed'] text-[#103c00] font-bold text-2xl mb-4 text-left -ml-2 tracking-tight">
-                        You’re going to register with the state of Utah. You can start this before you arrive.
-                      </p>
-                      <div className="flex flex-col gap-6 mt-9">
-                        <div className="flex items-center gap-x-6">
-                          <button className="w-[240px] h-[55px] bg-[#e7cbaf] text-[#103c00] text-xl font-['Interstate Condensed'] font-normal rounded-full ml-4">
-                            UtahID.org
-                          </button>
-                          <span className="text-[#103c00] font-bold text-xl ml-1">
-                            Obtain access to your Utah Digital ID
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-x-6">
-                          <button className="w-[240px] h-[55px] bg-[#e7cbaf] text-[#103c00] text-xl font-['Interstate Condensed'] font-normal rounded-full ml-4">
-                            EVS.Utah.gov
-                          </button>
-                          <span className="text-[#103c00] font-bold text-xl ml-1">
-                            Fill out all the fields until you get to “Awaiting Certification” status
-                          </span>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center mt-4">
-                        <div style={{ width: 254 }} />
+                  <div
+                    className="flex flex-col w-[1100px] mb-6"
+                    style={{ marginLeft: "-120px" }}
+                  >
+                    {/* Row 1: Icon + Sentence */}
+                    <div className="flex items-center">
+                      <div
+                        className="flex items-center justify-center mr-8 flex-shrink-0"
+                        style={{ width: 90 }}
+                      >
                         <Image
-                          src="/AwaitingCert-Image@2x.png"
-                          alt="Awaiting Certification"
-                          width={260}
-                          height={120}
+                          src="/Number1@2x.png"
+                          alt="Step 1"
+                          width={90}
+                          height={90}
                         />
                       </div>
+                      <span
+                        className="font-['Interstate Condensed'] text-[#103c00] font-bold text-3xl text-left tracking-tight whitespace-nowrap"
+                        style={{ marginBottom: 0 }}
+                      >
+                        You’re going to register with the state of Utah. You can
+                        start this before you arrive.
+                      </span>
+                    </div>
+
+                    {/* Row 2: Buttons and Explanations, aligned with sentence */}
+                    <div className="flex flex-col gap-6 mt-8">
+                      <div className="grid grid-cols-[160px_290px_1fr] items-center">
+                        <div />
+                        <button className="h-[65px] bg-[#e7cbaf] text-[#103c00] text-2xl font-['Interstate Condensed'] font-normal rounded-full w-[290px]">
+                          UtahID.org
+                        </button>
+                        <span className="text-[#103c00] font-bold text-2xl ml-6">
+                          Obtain access to your Utah Digital ID
+                        </span>
+                      </div>
+                      <div className="grid grid-cols-[160px_290px_1fr] items-center">
+                        <div />
+                        <button className="h-[65px] bg-[#e7cbaf] text-[#103c00] text-2xl font-['Interstate Condensed'] font-normal rounded-full w-[290px]">
+                          EVS.Utah.gov
+                        </button>
+                        <span className="text-[#103c00] font-bold text-2xl ml-6 whitespace-nowrap">
+                          Fill out all the fields until you get to “Awaiting
+                          Certification” status
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Row 3: Image, aligned with buttons */}
+                    <div className="flex items-center mt-4">
+                      <div style={{ width: 440 }} />
+                      <Image
+                        src="/AwaitingCert-Image@2x.png"
+                        alt="Awaiting Certification"
+                        width={330}
+                        height={170}
+                      />
                     </div>
                   </div>
-
+                  <div style={{ height: 80 }} />
                   {/* STEP 2 */}
-                  <div className="flex items-start mb-6 w-full">
+                  <div
+                    className="flex items-start mb-6 w-full"
+                    style={{ marginLeft: "-120px" }}
+                  >
                     <div className="flex flex-col items-center mr-8 mt-[-10px]">
-                      <Image src="/Number2@2x.png" alt="Step 2" width={60} height={60} />
+                      <Image
+                        src="/Number2@2x.png"
+                        alt="Step 2"
+                        width={90}
+                        height={90}
+                      />
                     </div>
-                    <div className="flex-1 flex items-center">
-                      <span className="font-['Interstate Condensed'] text-[#103c00] font-bold text-2xl text-left -ml-3 tracking-tight mr-9 mb-12">
+                    <div
+                      className="flex-1 flex items-center"
+                      style={{ marginTop: "-38px" }}
+                    >
+                      <span className="font-['Interstate Condensed'] text-[#103c00] font-bold text-3xl text-left ml-4 tracking-tight mr-9 mb-6">
                         Check in with your QMP
                       </span>
-                      <ol className="list-decimal text-xl font-['Interstate Condensed'] font-bold ml-8">
+                      <ol
+                        className="list-decimal text-2xl font-['Interstate Condensed'] font-bold ml-10 space-y-2"
+                        style={{ marginTop: "50px" }}
+                      >
                         <li>QMP Registration</li>
                         <li>Medical Evaluation/Consultation</li>
                         <li>Payment</li>
                       </ol>
                     </div>
                   </div>
+                  <div style={{ height: 80 }} />
 
                   {/* STEP 3 */}
-                  <div className="flex items-start w-full mb-0">
-                    <div className="flex flex-col items-center -mr-3 mt-[-10px]">
-                      <Image src="/Number3@2x.png" alt="Step 3" width={70} height={70} />
+                  <div
+                    className="flex items-start w-full mb-0"
+                    style={{ marginLeft: "-120px" }}
+                  >
+                    <div className="flex flex-col items-center mr-8 mt-[-10px]">
+                      <Image
+                        src="/Number3@2x.png"
+                        alt="Step 3"
+                        width={90}
+                        height={90}
+                        style={{ minWidth: 90, minHeight: 90 }}
+                      />
                     </div>
-                    <div className="flex-1">
-                      <div className="flex items-baseline">
-                        <span className="font-['Interstate Condensed'] text-[#103c00] font-bold text-2xl text-left ml-9 tracking-tight mr-7">
-                          Renewal or New Patient?
+                    <div
+                      className="flex-1 flex items-start"
+                      style={{ marginTop: "18px", marginLeft: "23px" }}
+                    >
+                      <span className="font-['Interstate Condensed'] text-[#103c00] font-bold text-3xl text-left tracking-tight whitespace-nowrap mr-9">
+                        Renewal or New Patient?
+                      </span>
+                      <div>
+                        <span
+                          className="text-2xl font-['Interstate Condensed'] font-bold text-[#103c00] whitespace-nowrap"
+                          style={{ marginLeft: "-6px" }}
+                        >
+                          If this is a renewal, congratulations you are ready to
+                          shop…
                         </span>
-                        <span className="text-xl font-['Interstate Condensed'] font-bold text-[#103c00] ml-1">
-                          If this is a renewal, congratulations you are ready to shop…
-                        </span>
-                      </div>
-                      <div className="flex items-baseline mt-0">
-                        <span className="ml-[345px] text-xl font-['Interstate Condensed'] font-bold text-[#103c00]">
-                          If you are a new patient, here are some helps to get you started…
-                        </span>
-                      </div>
-                      <ol className="list-decimal text-xl font-['Interstate Condensed'] font-bold ml-[472px] mt-2 space-y-2">
-                        <li>Meet with Pharmacist</li>
-                        <li>Set up your Portal Account</li>
-                        <li>Start Shopping</li>
-                      </ol>
-                      <div style={{ width: "100%", paddingTop: 15, paddingBottom: 0 }}></div>
-                      <div className="ml-[442px] mt-0 mb-0">
-                        <span className="text-xl font-['Interstate Condensed'] font-bold text-[#103c00] whitespace-nowrap ml-1">
-                          **Don’t forget to take advantage of new patient deals**
-                        </span>
+                        <div>
+                          <span
+                            className="text-2xl font-['Interstate Condensed'] font-bold text-[#103c00] whitespace-nowrap block mt-2"
+                            style={{ marginLeft: "-6px" }}
+                          >
+                            If you are a new patient, here are some helps to get
+                            you started…
+                          </span>
+                          <ol
+                            className="list-decimal text-2xl font-['Interstate Condensed'] font-bold ml-8 mt-2 space-y-4"
+                            style={{ marginLeft: "150px" }}
+                          >
+                            <li>Meet with Pharmacist</li>
+                            <li>Set up your Portal Account</li>
+                            <li>Start Shopping</li>
+                          </ol>
+                          <span
+                            className="text-2xl font-['Interstate Condensed'] font-bold text-[#103c00] whitespace-nowrap mt-2 block"
+                            style={{ marginTop: "30px", marginLeft: "120px" }}
+                          >
+                            **Don’t forget to take advantage of new patient
+                            deals**
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </section>
             </div>
-
+            <div style={{ height: 30 }} />
             {/* BANNER AD */}
-            <div className="w-full bg-white" style={{ paddingTop: 150, paddingBottom: 0 }}>
-              <div className="flex justify-center">
-                <div className="relative w-[1250px] h-[300px]">
-                  <Image
-                    src="/MockBannerAd@2x.png"
-                    alt="Mock Banner Ad"
-                    fill
-                    className="object-cover rounded-xl"
-                    style={{
-                      borderRadius: "12px",
-                    }}
-                  />
-                  {/* "Ad" Text */}
-                  <div
-                    className="absolute"
-                    style={{
-                      bottom: "20px",
-                      right: "20px",
-                      color: "#808080",
-                      fontSize: "16px",
-                      fontFamily: "Interstate Condensed, sans-serif",
-                      fontWeight: 500,
-                    }}
-                  >
-                    Ad
-                  </div>
+            <div className="flex justify-center">
+              <div
+                className="relative w-[1380px] h-[300px] mx-auto"
+                style={{ marginLeft: "-50px" }}
+              >
+                <Image
+                  src="/MockBannerAd@2x.png"
+                  alt="Mock Banner Ad"
+                  fill
+                  className="object-cover rounded-xl"
+                  style={{
+                    borderRadius: "12px",
+                  }}
+                />
+                {/* "Ad" Text */}
+                <div
+                  className="absolute"
+                  style={{
+                    bottom: "20px",
+                    right: "20px",
+                    color: "#808080",
+                    fontSize: "16px",
+                    fontFamily: "Interstate Condensed, sans-serif",
+                    fontWeight: 500,
+                  }}
+                >
+                  Ad
                 </div>
               </div>
             </div>
-
             {/* HOW TO GET CARD */}
             <section className="bg-white text-gray-800 py-12 px-6">
-              <h2 className="text-3xl font-extrabold font-proxima text-center mb-6" style={{ color: "#103c00" }}>
+              <h2
+                className="text-3xl font-extrabold font-proxima text-center mb-6"
+                style={{ color: "#103c00" }}
+              >
                 How to Get Your Utah Medical Card
               </h2>
               <ol className="list-decimal list-inside max-w-2xl mx-auto space-y-4 text-left">
