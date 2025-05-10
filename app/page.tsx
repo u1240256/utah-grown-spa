@@ -91,12 +91,13 @@ export default function Home() {
               Utah’s Cannabis Community
             </h2>
           </section>
-
+          <div className="w-full bg-white" style={{ paddingTop: 43, paddingBottom: 0 }}> </div>
           <section className="text-center py-2 px-4">
             <h1 className="text-5xl font-bold font-Proxima Nova pl-11" style={{ color: "#103c00" }}>
               Upcoming Utah Medical Card Events
             </h1>
-            <div className="mt-10 flex flex-col gap-10 items-end">
+            <div className="w-full bg-white" style={{ paddingTop: 20, paddingBottom: 0 }}> </div>
+            <div className="flex flex-col gap-10 items-center w-full">
               {[
                 {
                   location: "Downtown\nSLC",
@@ -119,12 +120,9 @@ export default function Home() {
               ].map(({ location, date, time, note }, i) => (
                 <div
                   key={i}
-                  className="w-[1100px] mr-8"
-                  style={{
-                    maxWidth: "95%",
-                  }}
+                  className="w-[1250px] max-w-full flex justify-center"
                 >
-                  <div className="flex items-center bg-[#f2f2f2] border border-[#103c00] rounded-xl h-[150px] px-8">
+                  <div className="flex items-center bg-[#f2f2f2] border border-[#103c00] rounded-xl h-[150px] px-8 w-full">
                     <div className="w-[25%] flex justify-start items-center pl-4">
                       <p className="text-2xl text-[#35711f] font-proxima leading-tight whitespace-pre-line text-center">
                         {location}
@@ -153,134 +151,137 @@ export default function Home() {
           </section>
 
           {/* THINGS TO KNOW */}
-          <section className="bg-white py-0 px-6 text-[#103c00] flex flex-col items-end">
-            <div className="w-[1100px] max-w-full mx-auto bg-white rounded-xl py-2 px-8 shadow-none">
-              <h2 className="text-4xl font-bold text-center mb-6 mt-10" style={{ color: "#103c00" }}>
-                Things to know before your appointment
-              </h2>
-              {/* STEP 1 */}
-              <div className="flex items-start mb-6 w-full">                <div className="flex flex-col items-center mr-8 mt-[-10px]">
-                <Image src="/Number1@2x.png" alt="Step 1" width={60} height={60} />
-              </div>
-                <div className="flex-1">
-                  <p className="font-['Interstate Condensed'] text-[#103c00] font-bold text-2xl mb-4 text-left -ml-2 tracking-tight">
-                    You’re going to register with the state of Utah. You can start this before you arrive.
-                  </p>
-                  <div className="flex flex-col gap-6 mt-9">
-                    <div className="flex items-center gap-x-6">
-                      <button className="w-[240px] h-[55px] bg-[#e7cbaf] text-[#103c00] text-xl font-['Interstate Condensed'] font-normal rounded-full ml-4">
-                        UtahID.org
-                      </button>
-                      <span className="text-[#103c00] font-bold text-xl ml-1">
-                        Obtain access to your Utah Digital ID
+          <div className="w-full bg-white" style={{ paddingTop: 50, paddingBottom: 0 }}>
+            <section className="bg-white py-0 px-6 text-[#103c00] flex flex-col items-end">
+              <div className="w-[1250px] max-w-full mx-auto bg-white rounded-xl py-2 px-8 shadow-none">
+                <h2 className="text-4xl font-bold text-center mb-6 mt-10" style={{ color: "#103c00" }}>
+                  Things to know before your appointment
+                </h2>
+                <div className="w-full" style={{ paddingTop: 40, paddingBottom: 0 }}></div>
+                {/* STEP 1 */}
+                <div className="flex items-start mb-6 w-full">
+                  <div className="flex flex-col items-center mr-8 mt-[-10px]">
+                    <Image src="/Number1@2x.png" alt="Step 1" width={60} height={60} />
+                  </div>
+                  <div className="flex-1">
+                    <p className="font-['Interstate Condensed'] text-[#103c00] font-bold text-2xl mb-4 text-left -ml-2 tracking-tight">
+                      You’re going to register with the state of Utah. You can start this before you arrive.
+                    </p>
+                    <div className="flex flex-col gap-6 mt-9">
+                      <div className="flex items-center gap-x-6">
+                        <button className="w-[240px] h-[55px] bg-[#e7cbaf] text-[#103c00] text-xl font-['Interstate Condensed'] font-normal rounded-full ml-4">
+                          UtahID.org
+                        </button>
+                        <span className="text-[#103c00] font-bold text-xl ml-1">
+                          Obtain access to your Utah Digital ID
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-x-6">
+                        <button className="w-[240px] h-[55px] bg-[#e7cbaf] text-[#103c00] text-xl font-['Interstate Condensed'] font-normal rounded-full ml-4">
+                          EVS.Utah.gov
+                        </button>
+                        <span className="text-[#103c00] font-bold text-xl ml-1">
+                          Fill out all the fields until you get to “Awaiting Certification” status
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center mt-4">
+                      <div style={{ width: 254 }} />
+                      <Image
+                        src="/AwaitingCert-Image@2x.png"
+                        alt="Awaiting Certification"
+                        width={260}
+                        height={120}
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* STEP 2 */}
+                <div className="flex items-start mb-6 w-full">
+                  <div className="flex flex-col items-center mr-8 mt-[-10px]">
+                    <Image src="/Number2@2x.png" alt="Step 2" width={60} height={60} />
+                  </div>
+                  <div className="flex-1 flex items-center">
+                    <span className="font-['Interstate Condensed'] text-[#103c00] font-bold text-2xl text-left -ml-3 tracking-tight mr-9 mb-12">
+                      Check in with your QMP
+                    </span>
+                    <ol className="list-decimal text-xl font-['Interstate Condensed'] font-bold ml-8">
+                      <li>QMP Registration</li>
+                      <li>Medical Evaluation/Consultation</li>
+                      <li>Payment</li>
+                    </ol>
+                  </div>
+                </div>
+
+                {/* STEP 3 */}
+                <div className="flex items-start w-full mb-0">
+                  <div className="flex flex-col items-center -mr-3 mt-[-10px]">
+                    <Image src="/Number3@2x.png" alt="Step 3" width={70} height={70} />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-baseline">
+                      <span className="font-['Interstate Condensed'] text-[#103c00] font-bold text-2xl text-left ml-9 tracking-tight mr-7">
+                        Renewal or New Patient?
+                      </span>
+                      <span className="text-xl font-['Interstate Condensed'] font-bold text-[#103c00] ml-1">
+                        If this is a renewal, congratulations you are ready to shop…
                       </span>
                     </div>
-                    <div className="flex items-center gap-x-6">
-                      <button className="w-[240px] h-[55px] bg-[#e7cbaf] text-[#103c00] text-xl font-['Interstate Condensed'] font-normal rounded-full ml-4">
-                        EVS.Utah.gov
-                      </button>
-                      <span className="text-[#103c00] font-bold text-xl ml-1">
-                        Fill out all the fields until you get to “Awaiting Certification” status
+                    <div className="flex items-baseline mt-0">
+                      <span className="ml-[345px] text-xl font-['Interstate Condensed'] font-bold text-[#103c00]">
+                        If you are a new patient, here are some helps to get you started…
+                      </span>
+                    </div>
+                    <ol className="list-decimal text-xl font-['Interstate Condensed'] font-bold ml-[472px] mt-2 space-y-2">
+                      <li>Meet with Pharmacist</li>
+                      <li>Set up your Portal Account</li>
+                      <li>Start Shopping</li>
+                    </ol>
+                    <div style={{ width: "100%", paddingTop: 15, paddingBottom: 0 }}></div>
+                    <div className="ml-[442px] mt-0 mb-0">
+                      <span className="text-xl font-['Interstate Condensed'] font-bold text-[#103c00] whitespace-nowrap ml-1">
+                        **Don’t forget to take advantage of new patient deals**
                       </span>
                     </div>
                   </div>
-
-                  <div className="flex items-center mt-4">
-                    <div style={{ width: 254 }} />
-                    <Image
-                      src="/AwaitingCert-Image@2x.png"
-                      alt="Awaiting Certification"
-                      width={260}
-                      height={120}
-                    />
-                  </div>
                 </div>
               </div>
+            </section>
+          </div>
 
-              {/* STEP 2 */}
-              <div className="flex items-start mb-6 w-full">                <div className="flex flex-col items-center mr-8 mt-[-10px]">
-                <Image src="/Number2@2x.png" alt="Step 2" width={60} height={60} />
-              </div>
-                <div className="flex-1 flex items-center">
-                  <span className="font-['Interstate Condensed'] text-[#103c00] font-bold text-2xl text-left -ml-3 tracking-tight mr-9 mb-12">
-                    Check in with your QMP
-                  </span>
-                  <ol className="list-decimal text-xl font-['Interstate Condensed'] font-bold ml-8">
-                    <li>QMP Registration</li>
-                    <li>Medical Evaluation/Consultation</li>
-                    <li>Payment</li>
-                  </ol>
+          {/* BANNER AD */}
+          <div className="w-full bg-white" style={{ paddingTop: 150, paddingBottom: 0 }}>
+            <div className="flex justify-center">
+              <div className="relative w-[1250px] h-[300px]">
+                <Image
+                  src="/MockBannerAd@2x.png"
+                  alt="Mock Banner Ad"
+                  fill
+                  className="object-cover rounded-xl"
+                  style={{
+                    borderRadius: "12px",
+                  }}
+                />
+                {/* "Ad" Text */}
+                <div
+                  className="absolute"
+                  style={{
+                    bottom: "20px",
+                    right: "20px",
+                    color: "#808080",
+                    fontSize: "16px",
+                    fontFamily: "Interstate Condensed, sans-serif",
+                    fontWeight: 500,
+                  }}
+                >
+                  Ad
                 </div>
               </div>
-
-              {/* STEP 3 */}
-              <div className="flex items-start w-full mb-0">                <div className="flex flex-col items-center -mr-3 mt-[-10px]">
-                <Image src="/Number3@2x.png" alt="Step 3" width={70} height={70} />
-              </div>
-                <div className="flex-1">
-                  <div className="flex items-baseline">
-                    <span className="font-['Interstate Condensed'] text-[#103c00] font-bold text-2xl text-left ml-9 tracking-tight mr-7">
-                      Renewal or New Patient?
-                    </span>
-                    <span className="text-xl font-['Interstate Condensed'] font-bold text-[#103c00] ml-1">
-                      If this is a renewal, congratulations you are ready to shop…
-                    </span>
-                  </div>
-                  <div className="flex items-baseline mt-0">
-                    <span className="ml-[345px] text-xl font-['Interstate Condensed'] font-bold text-[#103c00]">
-                      If you are a new patient, here are some helps to get you started…
-                    </span>
-                  </div>
-                  <ol className="list-decimal text-xl font-['Interstate Condensed'] font-bold ml-[465px] mt-2 space-y-2">
-                    <li>Meet with Pharmacist</li>
-                    <li>Set up your Portal Account</li>
-                    <li>Start Shopping</li>
-                  </ol>
-                  <div className="ml-[442px] mt-0 mb-0">
-                    <span className="text-xl font-['Interstate Condensed'] font-bold text-[#103c00] whitespace-nowrap">
-                      **Don’t forget to take advantage of new patient deals**
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <div
-            className="relative flex justify-center items-center w-[1280px] h-[320px] mx-auto -mt-40 mb-10"
-            style={{ maxWidth: "100%" }}
-          >
-            <div className="w-full h-full rounded-2xl overflow-hidden relative bg-white">
-              <Image
-                src="/MockBannerAd.png"
-                alt="Mock Banner Ad"
-                width={1280}
-                height={320}
-                style={{ objectFit: "contain", width: "100%", height: "100%" }}
-                priority
-              />
-              <span
-                className="absolute"
-                style={{
-                  right: 0,
-                  bottom: 0,
-                  marginRight: "18px",
-                  marginBottom: "10px",
-                  color: "#808080",
-                  fontSize: "2rem",
-                  fontWeight: "bold",
-                  fontFamily: "sans-serif",
-                  letterSpacing: "0.05em",
-                  zIndex: 10,
-                  background: "rgba(255,255,255,0.85)",
-                  borderRadius: "8px",
-                  padding: "2px 16px 2px 16px",
-                  lineHeight: 1.2,
-                }}
-              >
-                Ad
-              </span>
             </div>
           </div>
+
           {/* HOW TO GET CARD */}
           <section className="bg-white text-gray-800 py-12 px-6">
             <h2 className="text-3xl font-extrabold font-proxima text-center mb-6" style={{ color: "#103c00" }}>
