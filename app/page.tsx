@@ -420,7 +420,7 @@ export default function Home() {
               style={{
                 width: 1460,
                 height: 350,
-                marginLeft: "-10%", 
+                marginLeft: "-10%",
               }}
             >
               <Image
@@ -447,20 +447,27 @@ export default function Home() {
                 Ad
               </div>
             </div>
-            {/* HOW TO GET CARD */}
-            <section className="bg-white text-gray-800 py-12 px-6">
-              <h2
-                className="text-3xl font-extrabold font-proxima text-center mb-6"
-                style={{ color: "#103c00" }}
-              >
-                How to Get Your Utah Medical Card
-              </h2>
-              <ol className="list-decimal list-inside max-w-2xl mx-auto space-y-4 text-left">
-                <li>Book an appointment with a QMP</li>
-                <li>Complete a medical evaluation</li>
-                <li>Pay & register with the Utah Department of Health</li>
-              </ol>
-            </section>
+            {/* CONSULTATION IMAGE */}
+            <div
+              className="relative"
+              style={{
+                width: 730, 
+                height: 2000,
+                marginLeft: "-10%", 
+                marginTop: 30,
+              }}
+            >
+              <Image
+                src="/Consultation2x.png"
+                alt="Consultation"
+                fill
+                className="object-contain rounded-xl"
+                style={{
+                  borderRadius: "12px",
+                  objectFit: "contain",
+                }}
+              />
+            </div>
           </div>
         </div>
       </div>
