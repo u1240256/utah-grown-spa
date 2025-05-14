@@ -206,7 +206,7 @@ export default function Home() {
                         className="w-[25%] flex justify-start items-center pl-4"
                         style={
                           location === "Downtown\nSLC" ||
-                          location === "Price UT"
+                            location === "Price UT"
                             ? { marginLeft: "39px" }
                             : {}
                         }
@@ -415,34 +415,36 @@ export default function Home() {
             </div>
             <div style={{ height: 30 }} />
             {/* BANNER AD */}
-            <div className="flex justify-center">
+            <div
+              className="relative"
+              style={{
+                width: 1460,
+                height: 350,
+                marginLeft: "-10%", 
+              }}
+            >
+              <Image
+                src="/MockBannerAd@2x.png"
+                alt="Mock Banner Ad"
+                fill
+                className="object-cover rounded-xl"
+                style={{
+                  borderRadius: "12px",
+                }}
+              />
+              {/* "Ad" Text */}
               <div
-                className="relative w-[1380px] h-[300px] mx-auto"
-                style={{ marginLeft: "-50px" }}
+                className="absolute"
+                style={{
+                  bottom: "20px",
+                  right: "20px",
+                  color: "#808080",
+                  fontSize: "16px",
+                  fontFamily: "Interstate Condensed, sans-serif",
+                  fontWeight: 500,
+                }}
               >
-                <Image
-                  src="/MockBannerAd@2x.png"
-                  alt="Mock Banner Ad"
-                  fill
-                  className="object-cover rounded-xl"
-                  style={{
-                    borderRadius: "12px",
-                  }}
-                />
-                {/* "Ad" Text */}
-                <div
-                  className="absolute"
-                  style={{
-                    bottom: "20px",
-                    right: "20px",
-                    color: "#808080",
-                    fontSize: "16px",
-                    fontFamily: "Interstate Condensed, sans-serif",
-                    fontWeight: 500,
-                  }}
-                >
-                  Ad
-                </div>
+                Ad
               </div>
             </div>
             {/* HOW TO GET CARD */}
