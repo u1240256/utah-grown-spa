@@ -462,10 +462,10 @@ export default function Home() {
             >
               <div
                 style={{
-                  width: 760, 
-                  height: 700, 
+                  width: 760,
+                  height: 700,
                   flexShrink: 0,
-                  background: "#f2f2f2", 
+                  background: "#f2f2f2",
                   overflow: "hidden",
                   display: "flex",
                   alignItems: "center",
@@ -491,7 +491,7 @@ export default function Home() {
                     color: "#103c00",
                     fontSize: "3.5rem",
                     fontFamily: "'Proxima Nova', sans-serif",
-                    fontWeight: 800, // Extrabold
+                    fontWeight: 800,
                     marginBottom: 0,
                     marginTop: 40,
                   }}
@@ -525,7 +525,86 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            
+            <div style={{ height: 120 }} />
+            {/* Review Section */}
+            <div
+              style={{
+                width: 1460,
+                height: 223,
+                marginLeft: "-10%",
+                position: "relative",
+                overflow: "hidden",
+                borderRadius: "0",
+                background: "#0b4e0b",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <img
+                src="/Review Banner@2x.png"
+                alt="Review Banner"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
+                  borderRadius: "0",
+                  display: "block",
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  zIndex: 1,
+                  pointerEvents: "none",
+                }}
+              />
+              <div
+                style={{
+                  position: "absolute",
+                  left: 80,
+                  top: "50%",
+                  transform: "translateY(-50%)",
+                  zIndex: 2,
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                }}
+              >
+                <h2
+                  style={{
+                    color: "white",
+                    fontSize: "3.0rem",
+                    fontFamily: "'Interstate Condensed', sans-serif",
+                    fontWeight: 300,
+                    marginBottom: 0,
+                    marginTop: 0,
+                    textAlign: "left",
+                    lineHeight: 1.1,
+                  }}
+                >
+                  We’d love to hear from you!
+                </h2>
+                <div style={{ height: 20 }} />
+                <button
+                  style={{
+                    background: "#e7cbaf",
+                    color: "#205c2a",
+                    fontSize: "2.2rem",
+                    fontFamily: "'Proxima Nova', sans-serif",
+                    fontWeight: 500,
+                    border: "none",
+                    borderRadius: "40px",
+                    width: "370px",
+                    height: "75px",
+                    cursor: "pointer",
+                    boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
+                    transition: "background 0.2s",
+                    textAlign: "center",
+                  }}
+                >
+                  Review us here!
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
