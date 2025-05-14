@@ -641,7 +641,7 @@ export default function Home() {
                     lineHeight: 1.6,
                     display: "flex",
                     flexDirection: "column",
-                    marginTop:-20,
+                    marginTop: -20,
                     gap: 10,
                   }}
                 >
@@ -674,6 +674,755 @@ export default function Home() {
                     Is my personal information confidential when applying for a
                     medical cannabis card?
                   </span>
+                </div>
+              </div>
+              <div style={{ height: 80 }} />
+
+              {/* Pharmacies Section */}
+              <div
+                style={{
+                  width: 1460,
+                  marginLeft: "0%",
+                  background: "white",
+                  padding: "0 0 60px 0",
+                  position: "relative",
+                }}
+              >
+                <div style={{ paddingLeft: 80 }}>
+                  <h2
+                    style={{
+                      fontFamily: "'Proxima Nova', sans-serif",
+                      color: "#103c00",
+                      fontWeight: 700,
+                      fontSize: "3.7rem",
+                      marginBottom: 20,
+                      marginTop: 0,
+                      letterSpacing: "-1px",
+                    }}
+                  >
+                    Utah Medical Cannabis Pharmacies
+                  </h2>
+
+                  {/* Dragonfly Wellness */}
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "flex-start",
+                      marginBottom: 18,
+                      gap: 30,
+                    }}
+                  >
+                    {/* Left: Name & Address */}
+                    <div style={{ flex: 2 }}>
+                      <div
+                        style={{
+                          color: "#35711f",
+                          fontWeight: 500,
+                          fontFamily: "'Proxima Nova', sans-serif",
+                          fontSize: "1.9rem",
+                          marginBottom: 2,
+                        }}
+                      >
+                        Dragonfly Wellness
+                      </div>
+                      <div
+                        style={{
+                          color: "#808080",
+                          fontSize: "1.40rem",
+                          fontWeight: 600,
+                          marginBottom: -10,
+                        }}
+                      >
+                        711 South State Street, Salt Lake City UT 84111
+                      </div>
+                      <div
+                        style={{
+                          color: "#808080",
+                          fontSize: "1.40rem",
+                          fontWeight: 600,
+                        }}
+                      >
+                        20 Main Street, Price UT 84501
+                      </div>
+                      <button
+                        style={{
+                          marginTop: 25,
+                          marginBottom: 15,
+                          background: "#e7cbaf",
+                          color: "#205c2a",
+                          fontSize: "1.40rem",
+                          fontFamily: "'Proxima Nova', sans-serif",
+                          fontWeight: 500,
+                          border: "none",
+                          borderRadius: "15px",
+                          width: "290px",
+                          height: "50px",
+                          cursor: "pointer",
+                          boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
+                          transition: "background 0.2s",
+                          textAlign: "center",
+                          display: "inline-block",
+                          letterSpacing: "0.5px",
+                        }}
+                      >
+                        New Patient Specials
+                      </button>
+                    </div>
+                    {/* Center: Phone */}
+                    <div
+                      style={{
+                        flex: 1,
+                        color: "#808080",
+                        fontSize: "1.40rem",
+                        fontWeight: 600,
+                        marginLeft: -90,
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: 1,
+                        lineHeight: 1.1,
+                      }}
+                    >
+                      <div style={{ height: 48 }} />
+                      <div style={{ marginBottom: 0, lineHeight: 1.1 }}>
+                        801-413-6945
+                      </div>
+                      <div style={{ marginBottom: 0, lineHeight: 1.1 }}>
+                        435-637-3770
+                      </div>
+                    </div>
+                    {/* Right: Website */}
+                    <div
+                      style={{
+                        flex: 1,
+                        color: "#808080",
+                        fontSize: "1.40rem",
+                        fontWeight: 600,
+                      }}
+                    >
+                      <div style={{ height: 48 }} />
+                      <div>
+                        <a
+                          href="https://www.dragonflywellness.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            color: "#808080",
+                            textDecoration: "none",
+                            marginLeft: -95,
+                          }}
+                        >
+                          www.dragonflywellness.com
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Bloc Pharmacy */}
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "flex-start",
+                      marginBottom: 18,
+                      gap: 30,
+                    }}
+                  >
+                    <div style={{ flex: 2 }}>
+                      <div
+                        style={{
+                          color: "#35711f",
+                          fontWeight: 500,
+                          fontFamily: "'Proxima Nova', sans-serif",
+                          fontSize: "1.9rem",
+                          marginBottom: 2,
+                        }}
+                      >
+                        Bloc Pharmacy
+                      </div>
+                      <div
+                        style={{
+                          color: "#808080",
+                          fontSize: "1.40rem",
+                          fontWeight: 600,
+                          marginBottom: -10,
+                        }}
+                      >
+                        10392 South Jordan Gateway South Jordan UT 84095
+                      </div>
+                      <div
+                        style={{
+                          color: "#808080",
+                          fontSize: "1.40rem",
+                          fontWeight: 600,
+                        }}
+                      >
+                        1624 S Convention Center Dr. St. George UT 84790
+                      </div>
+                    </div>
+                    <div
+                      style={{
+                        flex: 1,
+                        color: "#808080",
+                        fontSize: "1.40rem",
+                        fontWeight: 600,
+                        marginLeft: -90,
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: 1,
+                        lineHeight: 1.1,
+                      }}
+                    >
+                      <div style={{ height: 48 }} />
+                      <div style={{ marginBottom: 0, lineHeight: 1.1 }}>
+                        385-249-9400
+                      </div>
+                      <div style={{ marginBottom: 0, lineHeight: 1.1 }}>
+                        435-216-3400
+                      </div>
+                    </div>
+                    <div
+                      style={{
+                        flex: 1,
+                        color: "#808080",
+                        fontSize: "1.40rem",
+                        fontWeight: 600,
+                      }}
+                    >
+                      <div style={{ height: 48 }} />
+                      <div>
+                        <a
+                          href="https://www.blocdispensary.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            color: "#808080",
+                            textDecoration: "none",
+                            marginLeft: -95,
+                            fontWeight: 600,
+                          }}
+                        >
+                          www.blocdispensary.com
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  {/* Beehive Farmacy */}
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "flex-start",
+                      marginBottom: 18,
+                      gap: 30,
+                    }}
+                  >
+                    <div style={{ flex: 2 }}>
+                      <div
+                        style={{
+                          color: "#35711f",
+                          fontWeight: 500,
+                          fontFamily: "'Proxima Nova', sans-serif",
+                          fontSize: "1.9rem",
+                          marginBottom: 2,
+                        }}
+                      >
+                        Beehive Farmacy
+                      </div>
+                      <div
+                        style={{
+                          color: "#808080",
+                          fontSize: "1.40rem",
+                          fontWeight: 600,
+                          marginBottom: -10,
+                        }}
+                      >
+                        1991 S 3600 W Salt Lake City UT 84004
+                      </div>
+                      <div
+                        style={{
+                          color: "#808080",
+                          fontSize: "1.40rem",
+                          fontWeight: 600,
+                        }}
+                      >
+                        870 W 1150 S Suite C Brigham City UT 84302
+                      </div>
+                    </div>
+                    <div
+                      style={{
+                        flex: 1,
+                        color: "#808080",
+                        fontSize: "1.40rem",
+                        fontWeight: 600,
+                        marginLeft: -90,
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: 1,
+                        lineHeight: 1.1,
+                      }}
+                    >
+                      <div style={{ height: 48 }} />
+                      <div style={{ marginBottom: 0, lineHeight: 1.1 }}>
+                        385-212-0088
+                      </div>
+                      <div style={{ marginBottom: 0, lineHeight: 1.1 }}>
+                        435-919-0966
+                      </div>
+                    </div>
+                    <div
+                      style={{
+                        flex: 1,
+                        color: "#808080",
+                        fontSize: "1.40rem",
+                        fontWeight: 600,
+                      }}
+                    >
+                      <div style={{ height: 48 }} />
+                      <div>
+                        <a
+                          href="https://www.beehivefarmacy.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            color: "#808080",
+                            textDecoration: "none",
+                            marginLeft: -95,
+                            fontWeight: 600,
+                          }}
+                        >
+                          www.beehivefarmacy.com
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Cannabist */}
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "flex-start",
+                      marginBottom: 18,
+                      gap: 30,
+                    }}
+                  >
+                    <div style={{ flex: 2 }}>
+                      <div
+                        style={{
+                          color: "#35711f",
+                          fontWeight: 500,
+                          fontFamily: "'Proxima Nova', sans-serif",
+                          fontSize: "1.9rem",
+                          marginBottom: 2,
+                        }}
+                      >
+                        Cannabist
+                      </div>
+                      <div
+                        style={{
+                          color: "#808080",
+                          fontSize: "1.40rem",
+                          fontWeight: 600,
+                          marginBottom: -10,
+                        }}
+                      >
+                        484 South 1750 West Springville UT 84663
+                      </div>
+                    </div>
+                    <div
+                      style={{
+                        flex: 1,
+                        color: "#808080",
+                        fontSize: "1.40rem",
+                        fontWeight: 600,
+                        marginLeft: -90,
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: 1,
+                        lineHeight: 1.1,
+                      }}
+                    >
+                      <div style={{ height: 48 }} />
+                      <div style={{ marginBottom: 0, lineHeight: 1.1 }}>
+                        385-327-0922
+                      </div>
+                    </div>
+                    <div
+                      style={{
+                        flex: 1,
+                        color: "#808080",
+                        fontSize: "1.40rem",
+                        fontWeight: 600,
+                      }}
+                    >
+                      <div style={{ height: 48 }} />
+                      <div>
+                        <a
+                          href="https://www.gocannabist.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            color: "#808080",
+                            textDecoration: "none",
+                            marginLeft: -95,
+                            fontWeight: 600,
+                          }}
+                        >
+                          www.gocannabist.com
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  {/* Curaleaf */}
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "flex-start",
+                      marginBottom: 18,
+                      gap: 30,
+                    }}
+                  >
+                    <div style={{ flex: 2 }}>
+                      <div
+                        style={{
+                          color: "#35711f",
+                          fontWeight: 500,
+                          fontFamily: "'Proxima Nova', sans-serif",
+                          fontSize: "1.9rem",
+                          marginBottom: 2,
+                        }}
+                      >
+                        Curaleaf
+                      </div>
+                      <div
+                        style={{
+                          color: "#808080",
+                          fontSize: "1.40rem",
+                          fontWeight: 600,
+                          marginBottom: -10,
+                        }}
+                      >
+                        3633 N Thanksgiving Way, Lehi UT 84043
+                      </div>
+                      <div
+                        style={{
+                          color: "#808080",
+                          fontSize: "1.40rem",
+                          fontWeight: 600,
+                          marginBottom: -10,
+                        }}
+                      >
+                        1351 Kearns Blvd Suite 110-B Park City UT 84060
+                      </div>
+                      <div
+                        style={{
+                          color: "#808080",
+                          fontSize: "1.40rem",
+                          fontWeight: 600,
+                          marginBottom: -10,
+                        }}
+                      >
+                        222 N Draper Ln Provo UT 84601
+                      </div>
+                      <div
+                        style={{
+                          color: "#808080",
+                          fontSize: "1.40rem",
+                          fontWeight: 600,
+                        }}
+                      >
+                        757 S 1040 W Payson UT 84651
+                      </div>
+                    </div>
+                    <div
+                      style={{
+                        flex: 1,
+                        color: "#808080",
+                        fontSize: "1.40rem",
+                        fontWeight: 600,
+                        marginLeft: -90,
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: 1,
+                        lineHeight: 1.1,
+                      }}
+                    >
+                      <div style={{ height: 48 }} />
+                      <div style={{ marginBottom: 0, lineHeight: 1.1 }}>
+                        385-338-8010
+                      </div>
+                      <div style={{ marginBottom: 0, lineHeight: 1.1 }}>
+                        435-252-1052
+                      </div>
+                      <div style={{ marginBottom: 0, lineHeight: 1.1 }}>
+                        801-872-7447
+                      </div>
+                      <div style={{ marginBottom: 0, lineHeight: 1.1 }}>
+                        385-404-4422
+                      </div>
+                    </div>
+                    <div
+                      style={{
+                        flex: 1,
+                        color: "#808080",
+                        fontSize: "1.40rem",
+                        fontWeight: 600,
+                      }}
+                    >
+                      <div style={{ height: 48 }} />
+                      <div>
+                        <a
+                          href="https://www.curaleaf.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            color: "#808080",
+                            textDecoration: "none",
+                            marginLeft: -95,
+                            fontWeight: 600,
+                          }}
+                        >
+                          www.curaleaf.com
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* The Flower Shop */}
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "flex-start",
+                      marginBottom: 18,
+                      gap: 30,
+                    }}
+                  >
+                    <div style={{ flex: 2 }}>
+                      <div
+                        style={{
+                          color: "#35711f",
+                          fontWeight: 500,
+                          fontFamily: "'Proxima Nova', sans-serif",
+                          fontSize: "1.9rem",
+                          marginBottom: 2,
+                        }}
+                      >
+                        The Flower Shop
+                      </div>
+                      <div
+                        style={{
+                          color: "#808080",
+                          fontSize: "1.40rem",
+                          fontWeight: 600,
+                          marginBottom: -10,
+                        }}
+                      >
+                        3775 S Wall Ave South Ogden UT 84405
+                      </div>
+                      <div
+                        style={{
+                          color: "#808080",
+                          fontSize: "1.40rem",
+                          fontWeight: 600,
+                        }}
+                      >
+                        2150 N Main St. Suite 1 North Logan UT 84341
+                      </div>
+                    </div>
+                    <div
+                      style={{
+                        flex: 1,
+                        color: "#808080",
+                        fontSize: "1.40rem",
+                        fontWeight: 600,
+                        marginLeft: -90,
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: 1,
+                        lineHeight: 1.1,
+                      }}
+                    >
+                      <div style={{ height: 48 }} />
+                      <div style={{ marginBottom: 0, lineHeight: 1.1 }}>
+                        385-289-1800(Ext 1)
+                      </div>
+                      <div style={{ marginBottom: 0, lineHeight: 1.1 }}>
+                        385-289-1800(Ext 2)
+                      </div>
+                    </div>
+                    <div
+                      style={{
+                        flex: 1,
+                        color: "#808080",
+                        fontSize: "1.40rem",
+                        fontWeight: 600,
+                      }}
+                    >
+                      <div style={{ height: 48 }} />
+                      <div>
+                        <a
+                          href="https://www.theflowershopusa.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            color: "#808080",
+                            textDecoration: "none",
+                            marginLeft: -95,
+                            fontWeight: 600,
+                          }}
+                        >
+                          www.theflowershopusa.com
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  {/* WholesomeCo */}
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "flex-start",
+                      marginBottom: 18,
+                      gap: 30,
+                    }}
+                  >
+                    <div style={{ flex: 2 }}>
+                      <div
+                        style={{
+                          color: "#35711f",
+                          fontWeight: 500,
+                          fontFamily: "'Proxima Nova', sans-serif",
+                          fontSize: "1.9rem",
+                          marginBottom: 2,
+                        }}
+                      >
+                        WholesomeCo
+                      </div>
+                      <div
+                        style={{
+                          color: "#808080",
+                          fontSize: "1.40rem",
+                          fontWeight: 600,
+                        }}
+                      >
+                        580 W 100 N Suite 1, West Bountiful UT 84010
+                      </div>
+                    </div>
+                    <div
+                      style={{
+                        flex: 1,
+                        color: "#808080",
+                        fontSize: "1.40rem",
+                        fontWeight: 600,
+                        marginLeft: -89,
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: 1,
+                        lineHeight: 1.1,
+                      }}
+                    >
+                      <div style={{ height: 48 }} />
+                      <div style={{ marginBottom: 0, lineHeight: 1.1 }}>
+                        801-695-4480
+                      </div>
+                    </div>
+                    <div
+                      style={{
+                        flex: 1,
+                        color: "#808080",
+                        fontSize: "1.40rem",
+                        fontWeight: 600,
+                      }}
+                    >
+                      <div style={{ height: 48 }} />
+                      <div>
+                        <a
+                          href="https://www.wholesome.co"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            color: "#808080",
+                            textDecoration: "none",
+                            marginLeft: -90,
+                            fontWeight: 600,
+                          }}
+                        >
+                          www.wholesome.co
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  {/* Zion Medicinal */}
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "flex-start",
+                      marginBottom: 18,
+                      gap: 30,
+                    }}
+                  >
+                    <div style={{ flex: 2 }}>
+                      <div
+                        style={{
+                          color: "#35711f",
+                          fontWeight: 500,
+                          fontFamily: "'Proxima Nova', sans-serif",
+                          fontSize: "1.9rem",
+                          marginBottom: 2,
+                        }}
+                      >
+                        Zion Medicinal
+                      </div>
+                      <div
+                        style={{
+                          color: "#808080",
+                          fontSize: "1.40rem",
+                          fontWeight: 600,
+                        }}
+                      >
+                        301 S Main St. Cedar City UT 84720
+                      </div>
+                    </div>
+                    <div
+                      style={{
+                        flex: 1,
+                        color: "#808080",
+                        fontSize: "1.40rem",
+                        fontWeight: 600,
+                        marginLeft: -89,
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: 1,
+                        lineHeight: 1.1,
+                      }}
+                    >
+                      <div style={{ height: 48 }} />
+                      <div style={{ marginBottom: 0, lineHeight: 1.1 }}>
+                        435-244-4485
+                      </div>
+                    </div>
+                    <div
+                      style={{
+                        flex: 1,
+                        color: "#808080",
+                        fontSize: "1.40rem",
+                        fontWeight: 600,
+                      }}
+                    >
+                      <div style={{ height: 48 }} />
+                      <div>
+                        <a
+                          href="https://www.zionmed.co"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            color: "#808080",
+                            textDecoration: "none",
+                            marginLeft: -90,
+                            fontWeight: 600,
+                          }}
+                        >
+                          www.zionmed.co
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
