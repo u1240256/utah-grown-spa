@@ -491,7 +491,7 @@ export default function Home() {
                     color: "#103c00",
                     fontSize: "3.5rem",
                     fontFamily: "'Proxima Nova', sans-serif",
-                    fontWeight: 800,
+                    fontWeight: 700,
                     marginBottom: 0,
                     marginTop: 40,
                   }}
@@ -603,6 +603,78 @@ export default function Home() {
                 >
                   Review us here!
                 </button>
+              </div>
+            </div>
+            <div style={{ height: 100 }} />
+
+            {/* FAQs Section */}
+            <div
+              style={{
+                width: 1460,
+                marginLeft: "-16%",
+                color: "103c00",
+                background: "white",
+                padding: "0 0 60px 0",
+                position: "relative",
+              }}
+            >
+              <div style={{ paddingLeft: 80 }}>
+                <h2
+                  style={{
+                    fontFamily: "'Proxima Nova', sans-serif",
+                    color: "#103c00",
+                    fontWeight: 700,
+                    fontSize: "3.3rem",
+                    marginBottom: 36,
+                    marginTop: 0,
+                    letterSpacing: "-1px",
+                  }}
+                >
+                  FAQs...
+                </h2>
+                <div
+                  style={{
+                    fontFamily: "'Proxima Nova', sans-serif",
+                    color: "#20723a",
+                    fontWeight: 400,
+                    fontSize: "1.9rem",
+                    lineHeight: 1.6,
+                    display: "flex",
+                    flexDirection: "column",
+                    marginTop:-20,
+                    gap: 10,
+                  }}
+                >
+                  <span>
+                    If I don’t qualify, do i still have to pay the QMP?
+                  </span>
+                  <span>What are Utah’s qualifying medical conditions?</span>
+                  <span>
+                    Is documentation required to prove you have a medical
+                    condition?
+                  </span>
+                  <span>
+                    If I have a medical cannabis card, can I consume in public?
+                  </span>
+                  <span>
+                    What are the eligiblity requirements for a Utah medical
+                    cannabis card?
+                  </span>
+                  <span>
+                    What is the complete cost to get a medical cannabis card?
+                  </span>
+                  <span>How long does it take to receive your card?</span>
+                  <span>Where can I purchase medical cannabis in Utah?</span>
+                  <span>
+                    Can I grow my own cannabis plants with a medical cannabis
+                    card?
+                  </span>
+                  <span>How long is a medical cannabis card valid?</span>
+                  <span>
+                    Is my personal information confidential when applying for a
+                    medical cannabis card?
+                  </span>
+                </div>
               </div>
             </div>
           </div>
