@@ -206,7 +206,7 @@ export default function Home() {
                         className="w-[25%] flex justify-start items-center pl-4"
                         style={
                           location === "Downtown\nSLC" ||
-                            location === "Price UT"
+                          location === "Price UT"
                             ? { marginLeft: "39px" }
                             : {}
                         }
@@ -429,45 +429,103 @@ export default function Home() {
                 fill
                 className="object-cover rounded-xl"
                 style={{
-                  borderRadius: "12px",
+                  borderRadius: "0",
                 }}
               />
               {/* "Ad" Text */}
               <div
                 className="absolute"
                 style={{
-                  bottom: "20px",
+                  bottom: "-35px",
                   right: "20px",
                   color: "#808080",
-                  fontSize: "16px",
-                  fontFamily: "Interstate Condensed, sans-serif",
+                  fontSize: "25px",
+                  fontFamily: "Proxima Nova, sans-serif",
                   fontWeight: 500,
                 }}
               >
                 Ad
               </div>
             </div>
-            {/* CONSULTATION IMAGE */}
+            <div style={{ height: 80 }} />
+            {/* CONSULTATION IMAGE + TEXT */}
             <div
-              className="relative"
               style={{
-                width: 730, 
-                height: 2000,
-                marginLeft: "-10%", 
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "flex-start",
+                width: 1450,
+                marginLeft: "-10%",
                 marginTop: 30,
+                gap: 55,
               }}
             >
-              <Image
-                src="/Consultation2x.png"
-                alt="Consultation"
-                fill
-                className="object-contain rounded-xl"
+              <div
                 style={{
-                  borderRadius: "12px",
-                  objectFit: "contain",
+                  width: 760, 
+                  height: 700, 
+                  flexShrink: 0,
+                  background: "#f2f2f2", 
+                  overflow: "hidden",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
-              />
+              >
+                <img
+                  src="/Consultation2x.png"
+                  alt="Consultation"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    borderRadius: "0",
+                    display: "block",
+                  }}
+                />
+              </div>
+              {/* Text content */}
+              <div style={{ flex: 1, paddingLeft: 30 }}>
+                <h2
+                  style={{
+                    color: "#103c00",
+                    fontSize: "3.5rem",
+                    fontFamily: "'Proxima Nova', sans-serif",
+                    fontWeight: 800, // Extrabold
+                    marginBottom: 0,
+                    marginTop: 40,
+                  }}
+                >
+                  Utah Medical Cards
+                </h2>
+                <p
+                  style={{
+                    fontSize: "1.48rem",
+                    color: "#808080",
+                    lineHeight: 2.0,
+                    fontFamily: "'Interstate Condensed', sans-serif",
+                    fontWeight: 300,
+                    marginTop: 24,
+                  }}
+                >
+                  A medical cannabis card, also known as a medical mari-
+                  <br />
+                  juana card, is a state-issued identification card that allows{" "}
+                  <br />
+                  qualified patients to legally purchase and use medical <br />
+                  cannabis for the treatment of specific medical conditions.
+                  <br />
+                  In Utah, a card is required to access and purchase medi-
+                  <br />
+                  cal cannabis products from state-licensed dispensaries.
+                  <br />
+                  Having a medical card does not allow you to possess any <br />
+                  cannabis product but only the products you purchased <br />
+                  under your PAT (Medical Card ID number).
+                </p>
+              </div>
             </div>
+            
           </div>
         </div>
       </div>
