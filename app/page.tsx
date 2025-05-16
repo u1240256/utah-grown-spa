@@ -708,7 +708,7 @@ export default function Home() {
                     style={{
                       display: "flex",
                       alignItems: "flex-start",
-                      marginBottom: 18,
+                      marginBottom: 30,
                       gap: 30,
                     }}
                   >
@@ -822,7 +822,7 @@ export default function Home() {
                     style={{
                       display: "flex",
                       alignItems: "flex-start",
-                      marginBottom: 18,
+                      marginBottom: 30,
                       gap: 30,
                     }}
                   >
@@ -853,6 +853,7 @@ export default function Home() {
                           color: "#808080",
                           fontSize: "1.40rem",
                           fontWeight: 600,
+                          marginTop: 10,
                         }}
                       >
                         1624 S Convention Center Dr. St. George UT 84790
@@ -875,7 +876,13 @@ export default function Home() {
                       <div style={{ marginBottom: 0, lineHeight: 1.1 }}>
                         385-249-9400
                       </div>
-                      <div style={{ marginBottom: 0, lineHeight: 1.1 }}>
+                      <div
+                        style={{
+                          marginBottom: 0,
+                          lineHeight: 1.1,
+                          marginTop: 10,
+                        }}
+                      >
                         435-216-3400
                       </div>
                     </div>
@@ -910,7 +917,7 @@ export default function Home() {
                     style={{
                       display: "flex",
                       alignItems: "flex-start",
-                      marginBottom: 18,
+                      marginBottom: 30,
                       gap: 30,
                     }}
                   >
@@ -941,6 +948,7 @@ export default function Home() {
                           color: "#808080",
                           fontSize: "1.40rem",
                           fontWeight: 600,
+                          marginTop: 10,
                         }}
                       >
                         870 W 1150 S Suite C Brigham City UT 84302
@@ -963,7 +971,13 @@ export default function Home() {
                       <div style={{ marginBottom: 0, lineHeight: 1.1 }}>
                         385-212-0088
                       </div>
-                      <div style={{ marginBottom: 0, lineHeight: 1.1 }}>
+                      <div
+                        style={{
+                          marginBottom: 0,
+                          lineHeight: 1.1,
+                          marginTop: 10,
+                        }}
+                      >
                         435-919-0966
                       </div>
                     </div>
@@ -999,7 +1013,7 @@ export default function Home() {
                     style={{
                       display: "flex",
                       alignItems: "flex-start",
-                      marginBottom: 18,
+                      marginBottom: 30,
                       gap: 30,
                     }}
                   >
@@ -1075,7 +1089,7 @@ export default function Home() {
                     style={{
                       display: "flex",
                       alignItems: "flex-start",
-                      marginBottom: 18,
+                      marginBottom: 30,
                       gap: 30,
                     }}
                   >
@@ -1096,7 +1110,7 @@ export default function Home() {
                           color: "#808080",
                           fontSize: "1.40rem",
                           fontWeight: 600,
-                          marginBottom: -10,
+                          marginBottom: -5,
                         }}
                       >
                         3633 N Thanksgiving Way, Lehi UT 84043
@@ -1106,7 +1120,7 @@ export default function Home() {
                           color: "#808080",
                           fontSize: "1.40rem",
                           fontWeight: 600,
-                          marginBottom: -10,
+                          marginBottom: -5,
                         }}
                       >
                         1351 Kearns Blvd Suite 110-B Park City UT 84060
@@ -1116,7 +1130,7 @@ export default function Home() {
                           color: "#808080",
                           fontSize: "1.40rem",
                           fontWeight: 600,
-                          marginBottom: -10,
+                          marginBottom: -5,
                         }}
                       >
                         222 N Draper Ln Provo UT 84601
@@ -1145,13 +1159,13 @@ export default function Home() {
                       }}
                     >
                       <div style={{ height: 48 }} />
-                      <div style={{ marginBottom: 0, lineHeight: 1.1 }}>
+                      <div style={{ marginBottom: 5, lineHeight: 1.1 }}>
                         385-338-8010
                       </div>
-                      <div style={{ marginBottom: 0, lineHeight: 1.1 }}>
+                      <div style={{ marginBottom: 5, lineHeight: 1.1 }}>
                         435-252-1052
                       </div>
-                      <div style={{ marginBottom: 0, lineHeight: 1.1 }}>
+                      <div style={{ marginBottom: 5, lineHeight: 1.1 }}>
                         801-872-7447
                       </div>
                       <div style={{ marginBottom: 0, lineHeight: 1.1 }}>
@@ -1190,7 +1204,7 @@ export default function Home() {
                     style={{
                       display: "flex",
                       alignItems: "flex-start",
-                      marginBottom: 18,
+                      marginBottom: 30,
                       gap: 30,
                     }}
                   >
@@ -1211,7 +1225,7 @@ export default function Home() {
                           color: "#808080",
                           fontSize: "1.40rem",
                           fontWeight: 600,
-                          marginBottom: -10,
+                          marginBottom: 0,
                         }}
                       >
                         3775 S Wall Ave South Ogden UT 84405
@@ -1240,7 +1254,7 @@ export default function Home() {
                       }}
                     >
                       <div style={{ height: 48 }} />
-                      <div style={{ marginBottom: 0, lineHeight: 1.1 }}>
+                      <div style={{ marginBottom: 10, lineHeight: 1.1 }}>
                         385-289-1800(Ext 1)
                       </div>
                       <div style={{ marginBottom: 0, lineHeight: 1.1 }}>
@@ -1278,7 +1292,7 @@ export default function Home() {
                     style={{
                       display: "flex",
                       alignItems: "flex-start",
-                      marginBottom: 18,
+                      marginBottom: 30,
                       gap: 30,
                     }}
                   >
@@ -1423,6 +1437,151 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+            {/* Utah Grown Section */}
+            <div
+              style={{
+                width: 1460,
+                marginLeft: "-16%",
+                marginTop: 20,
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "flex-start",
+                position: "relative",
+                zIndex: 50,
+                minHeight: 650,
+              }}
+            >
+              <div
+                style={{
+                  width: "54%",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "flex-start",
+                  padding: "0px 0px 0px 80px",
+                  zIndex: 2,
+                }}
+              >
+                <div>
+                  <h2
+                    style={{
+                      color: "#103c00",
+                      fontFamily: "'Proxima Nova', sans-serif",
+                      fontWeight: 600,
+                      fontSize: "3.4rem",
+                      marginBottom: 0,
+                      marginTop: 20,
+                      letterSpacing: "2px",
+                    }}
+                  >
+                    About Utah Grown
+                  </h2>
+                  <div
+                    style={{
+                      color: "#808080",
+                      fontSize: "1.3rem",
+                      fontFamily: "'Interstate Condensed', sans-serif",
+                      fontWeight: 700,
+                      lineHeight: 2.1,
+                      marginBottom: 48,
+                      letterSpacing: "1px",
+                    }}
+                  >
+                    <div style={{ whiteSpace: "nowrap" }}>
+                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                      sed diam
+                    </div>
+                    <div style={{ whiteSpace: "nowrap" }}>
+                      nonummy nibh euismod tincidunt ut laoreet dolore magna
+                      aliquam erat
+                    </div>
+                    <div style={{ whiteSpace: "nowrap" }}>
+                      volutpat. Ut wisi enim ad minim veniam, quis nostrud
+                      exerci tation ullam-
+                    </div>
+                    <div style={{ whiteSpace: "nowrap" }}>
+                      corper suscipit lobortis nisl ut aliquip ex ea commodo
+                      consequat. Duis
+                    </div>
+                    <div style={{ whiteSpace: "nowrap" }}>
+                      autem vel eum iriure dolor in hendrerit in vulputate velit
+                      esse molestie
+                    </div>
+                    <div style={{ whiteSpace: "nowrap" }}>
+                      consequat, vel illum dolore.
+                    </div>
+                  </div>
+                </div>
+                {/* Utah Grown Office */}
+                <div style={{ marginTop: 32 }}>
+                  <h3
+                    style={{
+                      color: "#103c00",
+                      fontFamily: "'Proxima Nova', sans-serif",
+                      fontWeight: 700,
+                      fontSize: "3.4rem",
+                      marginBottom: 0,
+                      marginTop: -10,
+                      letterSpacing: "-1px",
+                    }}
+                  >
+                    Utah Grown Office
+                  </h3>
+                  <div
+                    style={{
+                      color: "#808080",
+                      fontSize: "2.3rem",
+                      fontFamily: "'Interstate Condensed', sans-serif",
+                      fontWeight: 550,
+                      lineHeight: 1.5,
+                    }}
+                  >
+                    <div>730 State Street</div>
+                    <div
+                      style={{
+                        color: "#4a5a6a",
+                        fontWeight: 700,
+                        fontSize: "2.15rem",
+                      }}
+                    >
+                      Salt Lake City, Utah 84111
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                style={{
+                  width: "46%",
+                  height: "100%",
+                  position: "relative",
+                  zIndex: 10,
+                  minHeight: 650,
+                }}
+              >
+                <div
+                  style={{
+                    position: "absolute",
+                    top: -140,
+                    right: "-250px",
+                    zIndex: 100,
+                    pointerEvents: "none",
+                  }}
+                >
+                  <Image
+                    src="/NormalizeItUtah.png"
+                    alt="Normalize It Utah"
+                    width={850}
+                    height={700}
+                    style={{
+                      objectFit: "contain",
+                      zIndex: 100,
+                      maxWidth: "none", 
+                      maxHeight: "none",
+                    }}
+                    priority
+                  />
                 </div>
               </div>
             </div>
