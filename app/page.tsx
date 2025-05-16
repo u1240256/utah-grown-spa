@@ -1577,7 +1577,7 @@ export default function Home() {
                     style={{
                       objectFit: "contain",
                       zIndex: 100,
-                      maxWidth: "none", 
+                      maxWidth: "none",
                       maxHeight: "none",
                     }}
                     priority
@@ -1585,6 +1585,19 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            <div style={{ height: 180 }} />
+            {/* Thin Green Bar */}
+            <div
+              style={{
+                width: HEADER_BG_WIDTH,
+                height: 4, 
+                background: "#103c00",
+                marginLeft: 0,
+                left: -500,
+                position: "absolute",
+                zIndex: 20,
+              }}
+            />
           </div>
         </div>
       </div>
