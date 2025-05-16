@@ -1589,8 +1589,8 @@ export default function Home() {
             {/* Thin Green Bar */}
             <div
               style={{
-                width: HEADER_BG_WIDTH,
-                height: 4, 
+                width: HEADER_BG_WIDTH + 35,
+                height: 4,
                 background: "#103c00",
                 marginLeft: 0,
                 left: -500,
@@ -1598,6 +1598,113 @@ export default function Home() {
                 zIndex: 20,
               }}
             />
+            {/* Green Utah Grown Logo */}
+            <div
+              style={{
+                width: "100%",
+                maxWidth: HEADER_BG_WIDTH,
+                display: "flex",
+                alignItems: "flex-end",
+                justifyContent: "flex-start",
+                background: "transparent",
+                position: "relative",
+                margin: "0 auto",
+                padding: "0",
+                height: 120,
+                zIndex: 1,
+              }}
+            >
+              {/* Logo */}
+              <div
+                style={{
+                  position: "relative",
+                  left: "-80px",
+                  top: "70px",
+                  height: "100%",
+                  display: "flex",
+                  alignItems: "flex-end",
+                }}
+              >
+                <Image
+                  src="/UtahGrownLogo-Green.png"
+                  alt="Utah Grown Logo"
+                  width={350}
+                  height={90}
+                  style={{
+                    objectFit: "contain",
+                    display: "block",
+                    marginBottom: 0,
+                  }}
+                  priority
+                />
+              </div>
+              <div
+                style={{
+                  flex: 1,
+                  display: "flex",
+                  alignItems: "flex-end",
+                  justifyContent: "flex-start",
+                  height: "100%",
+                  marginLeft: -10,
+                  marginBottom: -65,
+                }}
+              >
+                <span
+                  style={{
+                    color: "#103c00",
+                    fontFamily: "'Proxima Nova', sans-serif",
+                    fontWeight: 500,
+                    fontSize: "1.3rem",
+                    letterSpacing: "0.02em",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  UTAH’S CANNABIS COMMUNITY
+                </span>
+              </div>
+            </div>
+            <div style={{ height: 100 }} />
+            {/* Footer Green Bar */}
+            <div
+              style={{
+                width: HEADER_BG_WIDTH + 35,
+                height: GREEN_BAR_HEIGHT * 2 + 50,
+                background: "#205c2a",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                position: "relative",
+                margin: "0 auto",
+                left: -520,
+                zIndex: 10,
+              }}
+            >
+              <div
+                style={{
+                  width: "90%",
+                  maxWidth: 1460,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: 60,
+                  color: "white",
+                  fontFamily: "'Interstate Condensed', sans-serif",
+                  fontSize: "1.4rem",
+                  fontWeight: 100,
+                  marginBottom: 100,
+                  marginLeft: 720,
+                  letterSpacing: "1.3px",
+                }}
+              >
+                <span>©2023 All Rights Reserved.</span>
+                <a href="#" style={{ color: "white", textDecoration: "none" }}>
+                  Terms and Conditions
+                </a>
+                <a href="#" style={{ color: "white", textDecoration: "none" }}>
+                  Privacy Policy
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
